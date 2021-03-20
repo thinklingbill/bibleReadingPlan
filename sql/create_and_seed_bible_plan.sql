@@ -9,6 +9,7 @@ create table bible_plan_stg (
 ,end_verse integer
 );
 
+-- START OF BIBLE PLAN STAGE DATA
 insert into bible_plan_stg values(1,'Amos',1,0,3,0);
 insert into bible_plan_stg values(2,'Amos',4,0,6,0);
 insert into bible_plan_stg values(3,'Amos',7,0,9,0);
@@ -40,7 +41,7 @@ insert into bible_plan_stg values(28,'Exodus',37,0,40,0);
 insert into bible_plan_stg values(29,'',-1,0,-1,0);
 insert into bible_plan_stg values(30,'',-1,0,-1,0);
 insert into bible_plan_stg values(31,'Micah',1,0,4,0);
-insert into bible_plan_stg values(32,'Nahum',1,0,3,0);
+insert into bible_plan_stg values(32,'Micah',5,0,7,0);
 insert into bible_plan_stg values(33,'Isaiah',1,0,4,0);
 insert into bible_plan_stg values(34,'Isaiah',5,0,8,0);
 insert into bible_plan_stg values(35,'Isaiah',9,0,12,0);
@@ -51,13 +52,13 @@ insert into bible_plan_stg values(39,'Isaiah',25,0,28,0);
 insert into bible_plan_stg values(40,'Isaiah',29,0,32,0);
 insert into bible_plan_stg values(41,'Isaiah',33,0,36,0);
 insert into bible_plan_stg values(42,'Isaiah',37,0,39,0);
-insert into bible_plan_stg values(43,'Leviticus',1,0,4,0);
-insert into bible_plan_stg values(44,'Leviticus',5,0,11,0);
-insert into bible_plan_stg values(45,'Leviticus',12,0,15,0);
-insert into bible_plan_stg values(46,'Leviticus',16,0,19,0);
-insert into bible_plan_stg values(47,'Leviticus',20,0,25,0);
-insert into bible_plan_stg values(48,'Leviticus',26,0,27,0);
-insert into bible_plan_stg values(49,'',-1,0,-1,0);
+insert into bible_plan_stg values(43,'Nahum',1,0,3,0);
+insert into bible_plan_stg values(44,'Leviticus',1,0,7,0);
+insert into bible_plan_stg values(45,'Leviticus',8,0,12,0);
+insert into bible_plan_stg values(46,'Leviticus',13,0,15,0);
+insert into bible_plan_stg values(47,'Leviticus',16,0,22,0);
+insert into bible_plan_stg values(48,'Leviticus',23,0,25,0);
+insert into bible_plan_stg values(49,'Leviticus',26,0,27,0);
 insert into bible_plan_stg values(50,'',-1,0,-1,0);
 insert into bible_plan_stg values(51,'',-1,0,-1,0);
 insert into bible_plan_stg values(52,'Nahum',1,0,3,0);
@@ -232,10 +233,10 @@ insert into bible_plan_stg values(39,'Proverbs',8,0,10,0);
 insert into bible_plan_stg values(40,'Job',1,0,4,0);
 insert into bible_plan_stg values(41,'Job',5,0,8,0);
 insert into bible_plan_stg values(42,'Job',9,0,12,0);
-insert into bible_plan_stg values(43,'Job',13,0,14,0);
+insert into bible_plan_stg values(43,'Job',13,0,16,0);
 insert into bible_plan_stg values(44,'',-1,0,-1,0);
-insert into bible_plan_stg values(45,'Job',15,0,17,0);
-insert into bible_plan_stg values(46,'Job',18,0,21,0);
+insert into bible_plan_stg values(45,'Job',17,0,18,0);
+insert into bible_plan_stg values(46,'Job',19,0,22,0);
 insert into bible_plan_stg values(47,'',-1,0,-1,0);
 insert into bible_plan_stg values(48,'Job',22,0,25,0);
 insert into bible_plan_stg values(49,'Job',26,0,28,0);
@@ -552,7 +553,7 @@ insert into bible_plan_stg values(170,'Revelation',15,0,16,0);
 insert into bible_plan_stg values(171,'Revelation',17,0,18,0);
 insert into bible_plan_stg values(172,'Revelation',19,0,20,0);
 insert into bible_plan_stg values(173,'Revelation',21,0,22,0);
-select * from bible_plan_stg;
+-- END OF BIBLE PLAN STAGE DATA
 
 drop table if exists bible_plan;
 
@@ -568,5 +569,3 @@ select bps.day_id
  where bps.book_name > ''
  order by day_id, book_id
 ;
-
-select * from bible_plan;
