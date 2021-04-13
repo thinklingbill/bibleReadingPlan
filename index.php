@@ -137,13 +137,14 @@ class PDF extends FPDF
         // Select Arial italic 8
         $this->SetFont('Arial','I',8);
         // Print centered page number
-        $this->Cell(0,FOOTER_HEIGHT,'Page '.$this->PageNo(),0,0,'C');
+        $this->Cell(0,FOOTER_HEIGHT,'Version 3.0 - Page '.$this->PageNo(),0,0,'C');
     }    
 }
 
 
 
-$mysqli = new mysqli("127.0.0.1","root","Agios#322&","bible_reading_plan");
+#$mysqli = new mysqli("127.0.0.1","root","Agios#322&","bible_reading_plan");
+$mysqli = new mysqli("127.0.0.1","root","helloW0rld","bible_reading_plan");
 
 // Check connection
 if ($mysqli -> connect_errno) {
