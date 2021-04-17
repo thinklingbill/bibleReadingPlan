@@ -9,6 +9,9 @@ $bookIx = 0;
 $bookChap = array();
 $bookChapVerse = array();
 $bookChapRead = array();
+$bookOneChap = array( "Ob", "Phm", "2 Jn", "3 Jn", "Jud" );
+
+$count = 0;
 
 while( $line = fgets( $f ) ) {
    preg_match_all( "/<verse-number id=\"([a-zA-Z0-9: ]*)\"/", $line, $matches );
@@ -16,6 +19,7 @@ while( $line = fgets( $f ) ) {
    foreach( $matches[1] as $m ) {
 #      print ("$m\n");
 
+      $skip = false;
       if ( preg_match( "/([0-9]?\s?[A-Za-z]+)\s*([0-9]+):([0-9]+)/", $m, $matches2 ) ) {
          $book = $matches2[1];
          $chapter = $matches2[2];
@@ -25,26 +29,41 @@ while( $line = fgets( $f ) ) {
          $book = $matches2[1];
          $chapter = "1";
          $verse = $matches2[2];
+         # this checks to see if the book is really a one chapter book. If not, don't honor
+         # this match (there are some faulty verse-number tags that really refer to the chapter)
+         if ( !in_array( $book, $bookOneChap ) ) {
+#            print "Skipping bad one chapter verse pattern in $book\n";
+            $skip = true;
+         }
       }
       else {
          print "MISMATCH: $m\n ";
          die;
       }
       
-      print( $book . "|" . $chapter . "|" . $verse . "\n" );
+#      print( $book . "|" . $chapter . "|" . $verse . "\n" );
 
-      $bookChap[ $book ] = $chapter;
-      $bookChapVerse[ $book ][ $chapter ] = $verse;
-      $bookChapRead[ $book ][ $chapter ] = 0;
+#      if ( $chapter > "1" ) {
+#         print_r ( $bookChapVerse );
+#         die;
+#      }
+
+      if ( !$skip ) {
+         $bookChap[ $book ] = $chapter;
+         $bookChapVerse[ $book ][ $chapter ] = $verse;
+         $bookChapRead[ $book ][ $chapter ] = 0;
+      }
 
       // add to the book array if it isn't already there
       if ( !in_array( $book, $bookAr ) ) {
          $bookAr[ $bookIx++ ] = $book;
       } 
    }
+
+   $count++;
 }
 
-print_r( $bookChap );
+#print_r( $bookChap );
 print_r( $bookChapVerse );
 
 fclose( $f );
@@ -76,8 +95,8 @@ foreach( $bibleReadingPlan as $brp ) {
    $dayId = $brp->{ "day_id" };
 
    if ( !array_key_exists( $dayId, $versesPerDay ) ) {
-	   if ( $dayId == 8 ) {
-		   print ( "INITIALIZING DAY 8\n" );
+	   if ( $dayId == 158 ) {
+		   print ( "INITIALIZING DAY $dayId\n" );
 	   }
       $versesPerDay[ $dayId ] = 0; # initialized
    }
@@ -95,7 +114,7 @@ foreach( $bibleReadingPlan as $brp ) {
       }
       else { 
          $versesPerDay[ $dayId ] += $bookChapVerse[ $bookAr[ $bookIx ] ][ $i ];
-if ( $dayId == "8" ) {
+if ( $dayId == "158" ) {
    print "*** HERE ***  " . $bookAr[ $bookIx ] . " - " . " chapter $i " . $bookChapVerse[ $bookAr[ $bookIx ] ][ $i ] . "\n";
    print(" VERSES PER DAY: " . $versesPerDay[ $dayId ] . "\n" );
 }
@@ -119,8 +138,8 @@ foreach ( $bookAr as $b ) {
 
 print_r ( $versesPerDay );
 
-print_r ( $bookChapVerse[ "Mk" ] );
-
-
-
+foreach ( $versesPerDay as $key => $value ) {
+   print "$key|$value\n"; 
+}
+#print_r ( $bookChapVerse[ "Mk" ] );
 ?>
