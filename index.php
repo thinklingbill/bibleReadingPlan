@@ -1,4 +1,6 @@
 <?php
+# Produces a PDF of the Bible Reading Plan
+
 require('fpdf182/fpdf.php');
 
 define( "LEFT_MARGIN", 0.75 );
