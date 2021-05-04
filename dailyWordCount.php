@@ -4,6 +4,11 @@
 # also validates that each chapter and verse is read once
 # note: kjv jsons in the Bible-kjv directory come from https://github.com/aruljohn/Bible-kjv.git
 
+# Note: I've validated the total words in this json version of the Bible to various 
+# internet resources. It is very close, but can be a couple of words of per book (although many match exactly)
+# I'm not sure the difference but possibly slightly different versions of the KJV. Close enough for my purposes
+# though.
+
 echo "Read in list of kjv books\n";
 $kjvBook =  json_decode( file_get_contents(  "Bible-kjv/Books.json" ) );
 #print_r( $kjvBook );
@@ -37,14 +42,17 @@ foreach ( $planBook as $i => $n ) {
 
 print "$errors Errors detected\n";
 
+if ( $errors ) die;
+
 # if no errors, continue
 $counts = array();
 $read = array();
-if ( !$errors ) {
+$grandTotalWords = 0;
     # gather the chapters, verses and number of words per verse in the bible
     foreach ( $kjvBook as $b ) {
+        $wordsPerBook = 0;
         $jsonFile = "Bible-kjv/" . str_replace( " ", "", $b ) . ".json";
-        print( "Processing $jsonFile\n");
+        //print( "Processing $jsonFile\n");
         $j =  json_decode( file_get_contents(  $jsonFile ) );
 
         # read through the json, gathering chapters, verses per chapter, and word counts per chapter and verse
@@ -56,20 +64,24 @@ if ( !$errors ) {
             $verseCount = 0;
             $wordsPerChapter = 0;
             foreach( $c->{"verses"}  as $v ) {
-                $wordsPerVerse = str_word_count( $v->{"text"}, 0 );
+                // remove unicode characters, because they are being counted as words
+                $text = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $v->{"text"});
+                $wordsPerVerse = str_word_count( $text, 0 );
 #                print( "Verse: " . $v->{"verse"} . ", words: $wordsPerVerse\n" );
                 #print( "Text:" . $v->{"text"} . "| Word count: $wordsPerVerse\n" );
                 $verse = $v->{"verse"};
                 $wordsPerChapter += $wordsPerVerse;
+                $wordsPerBook += $wordsPerVerse;
+                $grandTotalWords += $wordsPerVerse;
                 $verseCount++;
                 $counts[ $b ][ "$chap.$verse"] = $wordsPerVerse;
                 $read[ $b ][ "$chap.$verse" ] = 0;
             }
-#            print( "Words for chapter " . $c->{"chapter"} . ": $wordsPerChapter\n");
-#            print_r( $counts ); die;
         }
+        print( "TOTAL NUMBER OF WORDS IN $b: $wordsPerBook\n");
     }
-}
+
+print ("TOTAL NUMBER OF WORDS IN THE KJV BIBLE JSON: $grandTotalWords\n");
 
 echo "Read in the current bible reading plan Json exported from mysql workbench\n";
 
@@ -84,7 +96,6 @@ foreach ( $plan as $p ) {
         # full chapter
         if ( $p->{"start_verse"} == 0 ) {
             if ( $k[0] >= $p->{"start_chapter"} and $k[0] <= $p->{"end_chapter"}) {
-#               print( "marking $bookName, $key to 1\n" );
                 $read[$bookName][$key]++;
                 $dayWords[ $p->{"day_id"} ] += $value;
             }
@@ -96,8 +107,6 @@ foreach ( $plan as $p ) {
              }
         }
     }
-
-#    if ( $count > 5 ) die;
 }
 
 # find any verses read more than once or not at all
@@ -120,17 +129,49 @@ if ( $dupReads > 0 ) {
     print( "Words duplicated: $dupReads\n");
 }
 
-#if ( $problem ) die;
-
 $total = 0;
 foreach( $dayWords as $key => $value ) {
-    print( "$key = $value\n");
+    print( "$key|$value\n");
     $total += $value;
 }
 
 print ( "TOTAL WORDS: $total\n");
 
- 
-#    if ( !array_key_exists( $dayId, $versesPerDay ) ) {
+if (!function_exists('stats_standard_deviation')) {
+    // note: from https://www.php.net/manual/en/function.stats-standard-deviation.php
+    /**
+     * This user-land implementation follows the implementation quite strictly;
+     * it does not attempt to improve the code or algorithm in any way. It will
+     * raise a warning if you have fewer than 2 values in your array, just like
+     * the extension does (although as an E_USER_WARNING, not E_WARNING).
+     *
+     * @param array $a
+     * @param bool $sample [optional] Defaults to false
+     * @return float|bool The standard deviation or false on error.
+     */
+    function stats_standard_deviation(array $a, $sample = false) {
+        $n = count($a);
+        if ($n === 0) {
+            trigger_error("The array has zero elements", E_USER_WARNING);
+            return false;
+        }
+        if ($sample && $n === 1) {
+            trigger_error("The array has only 1 element", E_USER_WARNING);
+            return false;
+        }
+        $mean = array_sum($a) / $n;
+        $carry = 0.0;
+        foreach ($a as $val) {
+            $d = ((double) $val) - $mean;
+            $carry += $d * $d;
+        };
+        if ($sample) {
+           --$n;
+        }
+        return sqrt($carry / $n);
+    }
+
+    print( "Standard Deviation: " . round( stats_standard_deviation( $dayWords ), 0 ) . "\n" );
+}
 
 ?>
