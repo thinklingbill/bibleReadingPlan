@@ -129,14 +129,6 @@ if ( $dupReads > 0 ) {
     print( "Words duplicated: $dupReads\n");
 }
 
-$total = 0;
-foreach( $dayWords as $key => $value ) {
-    print( "$key|$value\n");
-    $total += $value;
-}
-
-print ( "TOTAL WORDS: $total\n");
-
 if (!function_exists('stats_standard_deviation')) {
     // note: from https://www.php.net/manual/en/function.stats-standard-deviation.php
     /**
@@ -170,8 +162,25 @@ if (!function_exists('stats_standard_deviation')) {
         }
         return sqrt($carry / $n);
     }
-
-    print( "Standard Deviation: " . round( stats_standard_deviation( $dayWords ), 0 ) . "\n" );
 }
+
+$total = 0;
+foreach( $dayWords as $key => $value ) {
+    $total += $value;
+}
+
+$stdDev = round( stats_standard_deviation( $dayWords ), 0 );
+$avg = round( $total / count( $dayWords), 0 );
+
+print ( "Day|Words|StdDeviations\n");
+foreach( $dayWords as $key => $value ) {
+    $stdDeviations = round(( $value - $avg )/$stdDev, 2 );
+    print( "$key|$value|$stdDeviations\n");
+}
+    
+print ( "TOTAL WORDS: $total\n");
+print ( "AVERAGE PER DAY: $avg\n");
+print ( "STD DEVIATION: $stdDev\n");    
+
 
 ?>
