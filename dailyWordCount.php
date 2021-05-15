@@ -97,13 +97,21 @@ foreach ( $plan as $p ) {
         if ( $p->{"start_verse"} == 0 ) {
             if ( $k[0] >= $p->{"start_chapter"} and $k[0] <= $p->{"end_chapter"}) {
                 $read[$bookName][$key]++;
-                $dayWords[ $p->{"day_id"} ] += $value;
+                if ( !isset( $dayWords[ $p->{"day_id"} ] ) ) {
+                   $dayWords[ $p->{"day_id"} ] = $value;
+                } else {
+                   $dayWords[ $p->{"day_id"} ] += $value;
+                }
             }
         }
         else { # partial chapter. NOTE: assume no cros-chapter reading
             if ( $k[0] == $p->{"start_chapter"} and $k[1] >= $p->{"start_verse"} and $k[1] <= $p->{"end_verse"}) {
                 $read[$bookName][$key]++;
-                $dayWords[ $p->{"day_id"} ] += $value;                
+                if ( !isset( $dayWords[ $p->{"day_id"} ] ) ) {
+                   $dayWords[ $p->{"day_id"} ] = $value;
+                } else {
+                   $dayWords[ $p->{"day_id"} ] += $value;
+                }
              }
         }
     }
@@ -126,7 +134,14 @@ foreach ( $read as $k => $ar ) {
     }
 }
 if ( $dupReads > 0 ) {
-    print( "Words duplicated: $dupReads\n");
+    print( "Passages duplicated: $dupReads\n");
+}
+
+if ( $problem > 0 ) {
+    print "\n******** $problem problem(s) found in the plan\n";
+}
+else {
+    print "\nNo problems found in the plan!\n";
 }
 
 if (!function_exists('stats_standard_deviation')) {
@@ -172,10 +187,21 @@ foreach( $dayWords as $key => $value ) {
 $stdDev = round( stats_standard_deviation( $dayWords ), 0 );
 $avg = round( $total / count( $dayWords), 0 );
 
+print "****************\n";
 print ( "Day|Words|StdDeviations\n");
 foreach( $dayWords as $key => $value ) {
     $stdDeviations = round(( $value - $avg )/$stdDev, 2 );
     print( "$key|$value|$stdDeviations\n");
+}
+
+print "\n***OUTLIERS****************\n";
+
+print ( "Day|Words|StdDeviations\n");
+foreach( $dayWords as $key => $value ) {
+    $stdDeviations = round(( $value - $avg )/$stdDev, 2 );
+    if ( $value > 6000 or $value < 3000 ) {
+       print( "$key|$value|$stdDeviations\n");
+    }
 }
     
 print ( "TOTAL WORDS: $total\n");

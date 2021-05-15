@@ -3,6 +3,7 @@
 
 require('fpdf182/fpdf.php');
 
+define( "VERSION", "4.0");
 define( "LEFT_MARGIN", 0.75 );
 define( "RIGHT_MARGIN", 0.5 );
 define( "TOP_MARGIN", 0.5 );
@@ -139,7 +140,7 @@ class PDF extends FPDF
         // Select Arial italic 8
         $this->SetFont('Arial','I',8);
         // Print centered page number
-        $this->Cell(0,FOOTER_HEIGHT,'Version 3.0 - Page '.$this->PageNo(),0,0,'C');
+        $this->Cell(0,FOOTER_HEIGHT,'Version ' . VERSION . ' - Page '.$this->PageNo(),0,0,'C');
     }    
 }
 

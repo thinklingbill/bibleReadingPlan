@@ -1,15 +1,6 @@
 [
 	{
 		"day_id" : 1,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 1,
-		"end_chapter" : 1,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 1,
 		"book_id" : 30,
 		"book_name" : "Amos",
 		"start_chapter" : 1,
@@ -19,10 +10,28 @@
 	},
 	{
 		"day_id" : 1,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 1,
+		"end_chapter" : 1,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 1,
 		"book_id" : 41,
 		"book_name" : "Mark",
 		"start_chapter" : 1,
 		"end_chapter" : 3,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 2,
+		"book_id" : 30,
+		"book_name" : "Amos",
+		"start_chapter" : 4,
+		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -37,19 +46,28 @@
 	},
 	{
 		"day_id" : 2,
-		"book_id" : 30,
-		"book_name" : "Amos",
+		"book_id" : 41,
+		"book_name" : "Mark",
 		"start_chapter" : 4,
 		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 2,
+		"day_id" : 3,
 		"book_id" : 41,
 		"book_name" : "Mark",
-		"start_chapter" : 4,
-		"end_chapter" : 6,
+		"start_chapter" : 7,
+		"end_chapter" : 9,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 3,
+		"book_id" : 30,
+		"book_name" : "Amos",
+		"start_chapter" : 7,
+		"end_chapter" : 9,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -63,29 +81,11 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 3,
-		"book_id" : 30,
-		"book_name" : "Amos",
-		"start_chapter" : 7,
-		"end_chapter" : 9,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 3,
+		"day_id" : 4,
 		"book_id" : 41,
 		"book_name" : "Mark",
-		"start_chapter" : 7,
-		"end_chapter" : 9,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 4,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 4,
-		"end_chapter" : 4,
+		"start_chapter" : 10,
+		"end_chapter" : 12,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -100,10 +100,28 @@
 	},
 	{
 		"day_id" : 4,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 4,
+		"end_chapter" : 4,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 5,
 		"book_id" : 41,
 		"book_name" : "Mark",
-		"start_chapter" : 10,
-		"end_chapter" : 12,
+		"start_chapter" : 13,
+		"end_chapter" : 16,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 5,
+		"book_id" : 28,
+		"book_name" : "Hosea",
+		"start_chapter" : 4,
+		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -117,20 +135,11 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 5,
+		"day_id" : 6,
 		"book_id" : 28,
 		"book_name" : "Hosea",
-		"start_chapter" : 4,
-		"end_chapter" : 6,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 5,
-		"book_id" : 41,
-		"book_name" : "Mark",
-		"start_chapter" : 13,
-		"end_chapter" : 16,
+		"start_chapter" : 7,
+		"end_chapter" : 14,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -139,39 +148,12 @@
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 6,
-		"end_chapter" : 6,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 6,
-		"book_id" : 28,
-		"book_name" : "Hosea",
-		"start_chapter" : 7,
-		"end_chapter" : 11,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 7,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 7,
 		"end_chapter" : 7,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
 		"day_id" : 7,
-		"book_id" : 28,
-		"book_name" : "Hosea",
-		"start_chapter" : 12,
-		"end_chapter" : 14,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 8,
 		"book_id" : 1,
 		"book_name" : "Genesis",
 		"start_chapter" : 1,
@@ -180,7 +162,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 8,
+		"day_id" : 7,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 8,
@@ -189,7 +171,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 9,
+		"day_id" : 8,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 9,
+		"end_chapter" : 9,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 8,
 		"book_id" : 1,
 		"book_name" : "Genesis",
 		"start_chapter" : 7,
@@ -201,13 +192,13 @@
 		"day_id" : 9,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 9,
-		"end_chapter" : 9,
+		"start_chapter" : 10,
+		"end_chapter" : 10,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 10,
+		"day_id" : 9,
 		"book_id" : 1,
 		"book_name" : "Genesis",
 		"start_chapter" : 13,
@@ -219,13 +210,13 @@
 		"day_id" : 10,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 10,
-		"end_chapter" : 10,
+		"start_chapter" : 11,
+		"end_chapter" : 11,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 11,
+		"day_id" : 10,
 		"book_id" : 1,
 		"book_name" : "Genesis",
 		"start_chapter" : 19,
@@ -237,13 +228,13 @@
 		"day_id" : 11,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 11,
-		"end_chapter" : 11,
+		"start_chapter" : 12,
+		"end_chapter" : 12,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 12,
+		"day_id" : 11,
 		"book_id" : 1,
 		"book_name" : "Genesis",
 		"start_chapter" : 25,
@@ -253,15 +244,6 @@
 	},
 	{
 		"day_id" : 12,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 12,
-		"end_chapter" : 12,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 13,
 		"book_id" : 1,
 		"book_name" : "Genesis",
 		"start_chapter" : 31,
@@ -270,7 +252,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 13,
+		"day_id" : 12,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 13,
@@ -279,7 +261,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 14,
+		"day_id" : 13,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 14,
+		"end_chapter" : 14,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 13,
 		"book_id" : 1,
 		"book_name" : "Genesis",
 		"start_chapter" : 37,
@@ -289,15 +280,6 @@
 	},
 	{
 		"day_id" : 14,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 14,
-		"end_chapter" : 14,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 15,
 		"book_id" : 1,
 		"book_name" : "Genesis",
 		"start_chapter" : 43,
@@ -306,7 +288,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 16,
+		"day_id" : 15,
+		"book_id" : 40,
+		"book_name" : "Matthew",
+		"start_chapter" : 1,
+		"end_chapter" : 4,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 15,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 1,
@@ -318,13 +309,22 @@
 		"day_id" : 16,
 		"book_id" : 40,
 		"book_name" : "Matthew",
-		"start_chapter" : 1,
-		"end_chapter" : 4,
+		"start_chapter" : 5,
+		"end_chapter" : 7,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 17,
+		"day_id" : 16,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 15,
+		"end_chapter" : 15,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 16,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 4,
@@ -334,24 +334,24 @@
 	},
 	{
 		"day_id" : 17,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 15,
-		"end_chapter" : 15,
+		"book_id" : 40,
+		"book_name" : "Matthew",
+		"start_chapter" : 8,
+		"end_chapter" : 10,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
 		"day_id" : 17,
-		"book_id" : 40,
-		"book_name" : "Matthew",
-		"start_chapter" : 5,
-		"end_chapter" : 7,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 16,
+		"end_chapter" : 16,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 18,
+		"day_id" : 17,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 7,
@@ -361,24 +361,6 @@
 	},
 	{
 		"day_id" : 18,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 16,
-		"end_chapter" : 16,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 18,
-		"book_id" : 40,
-		"book_name" : "Matthew",
-		"start_chapter" : 8,
-		"end_chapter" : 10,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 19,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 10,
@@ -387,7 +369,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 19,
+		"day_id" : 18,
+		"book_id" : 40,
+		"book_name" : "Matthew",
+		"start_chapter" : 11,
+		"end_chapter" : 13,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 18,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 17,
@@ -397,15 +388,6 @@
 	},
 	{
 		"day_id" : 19,
-		"book_id" : 40,
-		"book_name" : "Matthew",
-		"start_chapter" : 11,
-		"end_chapter" : 13,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 20,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 13,
@@ -414,7 +396,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 20,
+		"day_id" : 19,
+		"book_id" : 40,
+		"book_name" : "Matthew",
+		"start_chapter" : 14,
+		"end_chapter" : 16,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 19,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 18,
@@ -424,15 +415,6 @@
 	},
 	{
 		"day_id" : 20,
-		"book_id" : 40,
-		"book_name" : "Matthew",
-		"start_chapter" : 14,
-		"end_chapter" : 16,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 21,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 16,
@@ -441,7 +423,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 21,
+		"day_id" : 20,
+		"book_id" : 40,
+		"book_name" : "Matthew",
+		"start_chapter" : 17,
+		"end_chapter" : 19,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 20,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 19,
@@ -451,15 +442,6 @@
 	},
 	{
 		"day_id" : 21,
-		"book_id" : 40,
-		"book_name" : "Matthew",
-		"start_chapter" : 17,
-		"end_chapter" : 19,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 22,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 19,
@@ -468,7 +450,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 22,
+		"day_id" : 21,
+		"book_id" : 40,
+		"book_name" : "Matthew",
+		"start_chapter" : 20,
+		"end_chapter" : 22,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 21,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 20,
@@ -478,15 +469,6 @@
 	},
 	{
 		"day_id" : 22,
-		"book_id" : 40,
-		"book_name" : "Matthew",
-		"start_chapter" : 20,
-		"end_chapter" : 22,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 23,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 22,
@@ -495,7 +477,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 23,
+		"day_id" : 22,
+		"book_id" : 40,
+		"book_name" : "Matthew",
+		"start_chapter" : 23,
+		"end_chapter" : 25,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 22,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 21,
@@ -505,24 +496,6 @@
 	},
 	{
 		"day_id" : 23,
-		"book_id" : 40,
-		"book_name" : "Matthew",
-		"start_chapter" : 23,
-		"end_chapter" : 25,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 24,
-		"book_id" : 2,
-		"book_name" : "Exodus",
-		"start_chapter" : 25,
-		"end_chapter" : 27,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 24,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 22,
@@ -531,7 +504,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 24,
+		"day_id" : 23,
+		"book_id" : 2,
+		"book_name" : "Exodus",
+		"start_chapter" : 25,
+		"end_chapter" : 27,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 23,
 		"book_id" : 40,
 		"book_name" : "Matthew",
 		"start_chapter" : 26,
@@ -540,7 +522,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 25,
+		"day_id" : 24,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 23,
+		"end_chapter" : 26,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 24,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 28,
@@ -552,13 +543,13 @@
 		"day_id" : 25,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 23,
-		"end_chapter" : 26,
+		"start_chapter" : 27,
+		"end_chapter" : 30,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 26,
+		"day_id" : 25,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 31,
@@ -568,15 +559,6 @@
 	},
 	{
 		"day_id" : 26,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 27,
-		"end_chapter" : 30,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 27,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 34,
@@ -585,7 +567,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 27,
+		"day_id" : 26,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 31,
@@ -594,7 +576,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 28,
+		"day_id" : 27,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 35,
+		"end_chapter" : 37,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 27,
 		"book_id" : 2,
 		"book_name" : "Exodus",
 		"start_chapter" : 37,
@@ -604,15 +595,15 @@
 	},
 	{
 		"day_id" : 28,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 35,
-		"end_chapter" : 37,
+		"book_id" : 42,
+		"book_name" : "Luke",
+		"start_chapter" : 1,
+		"end_chapter" : 2,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 29,
+		"day_id" : 28,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 38,
@@ -622,15 +613,6 @@
 	},
 	{
 		"day_id" : 29,
-		"book_id" : 42,
-		"book_name" : "Luke",
-		"start_chapter" : 1,
-		"end_chapter" : 2,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 30,
 		"book_id" : 32,
 		"book_name" : "Jonah",
 		"start_chapter" : 1,
@@ -639,7 +621,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 30,
+		"day_id" : 29,
 		"book_id" : 42,
 		"book_name" : "Luke",
 		"start_chapter" : 3,
@@ -648,7 +630,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 31,
+		"day_id" : 30,
+		"book_id" : 42,
+		"book_name" : "Luke",
+		"start_chapter" : 6,
+		"end_chapter" : 8,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 30,
 		"book_id" : 33,
 		"book_name" : "Micah",
 		"start_chapter" : 1,
@@ -658,15 +649,6 @@
 	},
 	{
 		"day_id" : 31,
-		"book_id" : 42,
-		"book_name" : "Luke",
-		"start_chapter" : 6,
-		"end_chapter" : 8,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 32,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 1,
@@ -675,7 +657,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 32,
+		"day_id" : 31,
+		"book_id" : 42,
+		"book_name" : "Luke",
+		"start_chapter" : 9,
+		"end_chapter" : 11,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 31,
 		"book_id" : 33,
 		"book_name" : "Micah",
 		"start_chapter" : 5,
@@ -685,15 +676,6 @@
 	},
 	{
 		"day_id" : 32,
-		"book_id" : 42,
-		"book_name" : "Luke",
-		"start_chapter" : 9,
-		"end_chapter" : 11,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 33,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 2,
@@ -702,7 +684,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 33,
+		"day_id" : 32,
+		"book_id" : 42,
+		"book_name" : "Luke",
+		"start_chapter" : 12,
+		"end_chapter" : 13,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 32,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 1,
@@ -712,15 +703,6 @@
 	},
 	{
 		"day_id" : 33,
-		"book_id" : 42,
-		"book_name" : "Luke",
-		"start_chapter" : 12,
-		"end_chapter" : 13,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 34,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 3,
@@ -729,7 +711,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 34,
+		"day_id" : 33,
+		"book_id" : 42,
+		"book_name" : "Luke",
+		"start_chapter" : 14,
+		"end_chapter" : 15,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 33,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 5,
@@ -739,15 +730,6 @@
 	},
 	{
 		"day_id" : 34,
-		"book_id" : 42,
-		"book_name" : "Luke",
-		"start_chapter" : 14,
-		"end_chapter" : 15,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 35,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 4,
@@ -756,7 +738,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 35,
+		"day_id" : 34,
+		"book_id" : 42,
+		"book_name" : "Luke",
+		"start_chapter" : 16,
+		"end_chapter" : 17,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 34,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 9,
@@ -766,15 +757,6 @@
 	},
 	{
 		"day_id" : 35,
-		"book_id" : 42,
-		"book_name" : "Luke",
-		"start_chapter" : 16,
-		"end_chapter" : 17,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 36,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 5,
@@ -783,7 +765,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 36,
+		"day_id" : 35,
+		"book_id" : 42,
+		"book_name" : "Luke",
+		"start_chapter" : 18,
+		"end_chapter" : 19,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 35,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 13,
@@ -793,24 +784,6 @@
 	},
 	{
 		"day_id" : 36,
-		"book_id" : 42,
-		"book_name" : "Luke",
-		"start_chapter" : 18,
-		"end_chapter" : 19,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 37,
-		"book_id" : 20,
-		"book_name" : "Proverbs",
-		"start_chapter" : 6,
-		"end_chapter" : 6,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 37,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 17,
@@ -819,7 +792,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 37,
+		"day_id" : 36,
+		"book_id" : 20,
+		"book_name" : "Proverbs",
+		"start_chapter" : 6,
+		"end_chapter" : 6,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 36,
 		"book_id" : 42,
 		"book_name" : "Luke",
 		"start_chapter" : 20,
@@ -828,16 +810,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 38,
-		"book_id" : 20,
-		"book_name" : "Proverbs",
-		"start_chapter" : 7,
-		"end_chapter" : 7,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 38,
+		"day_id" : 37,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 21,
@@ -846,7 +819,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 38,
+		"day_id" : 37,
+		"book_id" : 20,
+		"book_name" : "Proverbs",
+		"start_chapter" : 7,
+		"end_chapter" : 7,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 37,
 		"book_id" : 42,
 		"book_name" : "Luke",
 		"start_chapter" : 22,
@@ -855,7 +837,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 39,
+		"day_id" : 38,
+		"book_id" : 23,
+		"book_name" : "Isaiah",
+		"start_chapter" : 25,
+		"end_chapter" : 28,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 38,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 8,
@@ -867,13 +858,13 @@
 		"day_id" : 39,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
-		"start_chapter" : 25,
-		"end_chapter" : 28,
+		"start_chapter" : 29,
+		"end_chapter" : 32,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 40,
+		"day_id" : 39,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 1,
@@ -883,15 +874,6 @@
 	},
 	{
 		"day_id" : 40,
-		"book_id" : 23,
-		"book_name" : "Isaiah",
-		"start_chapter" : 29,
-		"end_chapter" : 32,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 41,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 4,
@@ -900,7 +882,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 41,
+		"day_id" : 40,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 33,
@@ -909,7 +891,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 42,
+		"day_id" : 41,
+		"book_id" : 23,
+		"book_name" : "Isaiah",
+		"start_chapter" : 36,
+		"end_chapter" : 39,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 41,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 8,
@@ -919,15 +910,15 @@
 	},
 	{
 		"day_id" : 42,
-		"book_id" : 23,
-		"book_name" : "Isaiah",
-		"start_chapter" : 36,
-		"end_chapter" : 39,
+		"book_id" : 34,
+		"book_name" : "Nahum",
+		"start_chapter" : 1,
+		"end_chapter" : 3,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 43,
+		"day_id" : 42,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 11,
@@ -937,15 +928,6 @@
 	},
 	{
 		"day_id" : 43,
-		"book_id" : 34,
-		"book_name" : "Nahum",
-		"start_chapter" : 1,
-		"end_chapter" : 3,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 44,
 		"book_id" : 3,
 		"book_name" : "Leviticus",
 		"start_chapter" : 1,
@@ -954,7 +936,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 45,
+		"day_id" : 44,
 		"book_id" : 3,
 		"book_name" : "Leviticus",
 		"start_chapter" : 8,
@@ -963,7 +945,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 45,
+		"day_id" : 44,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 15,
@@ -972,7 +954,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 46,
+		"day_id" : 45,
 		"book_id" : 3,
 		"book_name" : "Leviticus",
 		"start_chapter" : 13,
@@ -981,7 +963,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 47,
+		"day_id" : 46,
 		"book_id" : 3,
 		"book_name" : "Leviticus",
 		"start_chapter" : 16,
@@ -990,7 +972,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 47,
+		"day_id" : 46,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 18,
@@ -999,7 +981,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 48,
+		"day_id" : 47,
+		"book_id" : 18,
+		"book_name" : "Job",
+		"start_chapter" : 21,
+		"end_chapter" : 22,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 47,
 		"book_id" : 3,
 		"book_name" : "Leviticus",
 		"start_chapter" : 19,
@@ -1011,13 +1002,13 @@
 		"day_id" : 48,
 		"book_id" : 18,
 		"book_name" : "Job",
-		"start_chapter" : 21,
-		"end_chapter" : 22,
+		"start_chapter" : 23,
+		"end_chapter" : 24,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 49,
+		"day_id" : 48,
 		"book_id" : 3,
 		"book_name" : "Leviticus",
 		"start_chapter" : 23,
@@ -1027,15 +1018,6 @@
 	},
 	{
 		"day_id" : 49,
-		"book_id" : 18,
-		"book_name" : "Job",
-		"start_chapter" : 23,
-		"end_chapter" : 24,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 50,
 		"book_id" : 3,
 		"book_name" : "Leviticus",
 		"start_chapter" : 26,
@@ -1044,7 +1026,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 50,
+		"day_id" : 49,
+		"book_id" : 43,
+		"book_name" : "John",
+		"start_chapter" : 1,
+		"end_chapter" : 1,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 49,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 25,
@@ -1054,15 +1045,6 @@
 	},
 	{
 		"day_id" : 50,
-		"book_id" : 43,
-		"book_name" : "John",
-		"start_chapter" : 1,
-		"end_chapter" : 1,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 51,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 29,
@@ -1071,7 +1053,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 51,
+		"day_id" : 50,
 		"book_id" : 43,
 		"book_name" : "John",
 		"start_chapter" : 2,
@@ -1080,7 +1062,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 52,
+		"day_id" : 51,
+		"book_id" : 43,
+		"book_name" : "John",
+		"start_chapter" : 6,
+		"end_chapter" : 6,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 51,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 32,
@@ -1092,22 +1083,22 @@
 		"day_id" : 52,
 		"book_id" : 43,
 		"book_name" : "John",
-		"start_chapter" : 6,
-		"end_chapter" : 6,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 53,
-		"book_id" : 43,
-		"book_name" : "John",
 		"start_chapter" : 7,
 		"end_chapter" : 12,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 54,
+		"day_id" : 53,
+		"book_id" : 35,
+		"book_name" : "Habakkuk",
+		"start_chapter" : 1,
+		"end_chapter" : 3,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 53,
 		"book_id" : 18,
 		"book_name" : "Job",
 		"start_chapter" : 38,
@@ -1117,15 +1108,24 @@
 	},
 	{
 		"day_id" : 54,
-		"book_id" : 35,
-		"book_name" : "Habakkuk",
-		"start_chapter" : 1,
-		"end_chapter" : 3,
+		"book_id" : 43,
+		"book_name" : "John",
+		"start_chapter" : 13,
+		"end_chapter" : 17,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
 		"day_id" : 55,
+		"book_id" : 43,
+		"book_name" : "John",
+		"start_chapter" : 18,
+		"end_chapter" : 21,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 56,
 		"book_id" : 4,
 		"book_name" : "Numbers",
 		"start_chapter" : 1,
@@ -1134,16 +1134,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 55,
-		"book_id" : 43,
-		"book_name" : "John",
-		"start_chapter" : 13,
-		"end_chapter" : 15,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 56,
+		"day_id" : 57,
 		"book_id" : 4,
 		"book_name" : "Numbers",
 		"start_chapter" : 5,
@@ -1152,43 +1143,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 56,
-		"book_id" : 43,
-		"book_name" : "John",
-		"start_chapter" : 16,
-		"end_chapter" : 18,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 57,
+		"day_id" : 58,
 		"book_id" : 4,
 		"book_name" : "Numbers",
 		"start_chapter" : 9,
-		"end_chapter" : 12,
+		"end_chapter" : 13,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 57,
-		"book_id" : 43,
-		"book_name" : "John",
-		"start_chapter" : 19,
-		"end_chapter" : 21,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 58,
-		"book_id" : 4,
-		"book_name" : "Numbers",
-		"start_chapter" : 13,
-		"end_chapter" : 16,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 58,
+		"day_id" : 59,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 40,
@@ -1200,13 +1164,13 @@
 		"day_id" : 59,
 		"book_id" : 4,
 		"book_name" : "Numbers",
-		"start_chapter" : 17,
-		"end_chapter" : 20,
+		"start_chapter" : 14,
+		"end_chapter" : 16,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 59,
+		"day_id" : 60,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 43,
@@ -1218,13 +1182,22 @@
 		"day_id" : 60,
 		"book_id" : 4,
 		"book_name" : "Numbers",
+		"start_chapter" : 17,
+		"end_chapter" : 20,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 61,
+		"book_id" : 4,
+		"book_name" : "Numbers",
 		"start_chapter" : 21,
 		"end_chapter" : 23,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 60,
+		"day_id" : 61,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 46,
@@ -1233,16 +1206,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 61,
-		"book_id" : 4,
-		"book_name" : "Numbers",
-		"start_chapter" : 24,
-		"end_chapter" : 27,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 61,
+		"day_id" : 62,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 50,
@@ -1254,13 +1218,22 @@
 		"day_id" : 62,
 		"book_id" : 4,
 		"book_name" : "Numbers",
+		"start_chapter" : 24,
+		"end_chapter" : 27,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 63,
+		"book_id" : 4,
+		"book_name" : "Numbers",
 		"start_chapter" : 28,
 		"end_chapter" : 30,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 62,
+		"day_id" : 63,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 53,
@@ -1269,16 +1242,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 63,
-		"book_id" : 4,
-		"book_name" : "Numbers",
-		"start_chapter" : 31,
-		"end_chapter" : 34,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 63,
+		"day_id" : 64,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 57,
@@ -1290,13 +1254,13 @@
 		"day_id" : 64,
 		"book_id" : 4,
 		"book_name" : "Numbers",
-		"start_chapter" : 35,
-		"end_chapter" : 36,
+		"start_chapter" : 31,
+		"end_chapter" : 34,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 64,
+		"day_id" : 65,
 		"book_id" : 23,
 		"book_name" : "Isaiah",
 		"start_chapter" : 61,
@@ -1306,6 +1270,15 @@
 	},
 	{
 		"day_id" : 65,
+		"book_id" : 4,
+		"book_name" : "Numbers",
+		"start_chapter" : 35,
+		"end_chapter" : 36,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 66,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 42,
@@ -1314,16 +1287,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 65,
-		"book_id" : 24,
-		"book_name" : "Jeremiah",
-		"start_chapter" : 1,
-		"end_chapter" : 4,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 65,
+		"day_id" : 66,
 		"book_id" : 44,
 		"book_name" : "Acts",
 		"start_chapter" : 1,
@@ -1333,6 +1297,15 @@
 	},
 	{
 		"day_id" : 66,
+		"book_id" : 24,
+		"book_name" : "Jeremiah",
+		"start_chapter" : 1,
+		"end_chapter" : 4,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 67,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 43,
@@ -1341,16 +1314,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 66,
-		"book_id" : 24,
-		"book_name" : "Jeremiah",
-		"start_chapter" : 5,
-		"end_chapter" : 7,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 66,
+		"day_id" : 67,
 		"book_id" : 44,
 		"book_name" : "Acts",
 		"start_chapter" : 3,
@@ -1360,6 +1324,15 @@
 	},
 	{
 		"day_id" : 67,
+		"book_id" : 24,
+		"book_name" : "Jeremiah",
+		"start_chapter" : 5,
+		"end_chapter" : 7,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 68,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 44,
@@ -1368,16 +1341,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 67,
-		"book_id" : 24,
-		"book_name" : "Jeremiah",
-		"start_chapter" : 8,
-		"end_chapter" : 10,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 67,
+		"day_id" : 68,
 		"book_id" : 44,
 		"book_name" : "Acts",
 		"start_chapter" : 6,
@@ -1387,15 +1351,15 @@
 	},
 	{
 		"day_id" : 68,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 45,
-		"end_chapter" : 45,
+		"book_id" : 24,
+		"book_name" : "Jeremiah",
+		"start_chapter" : 8,
+		"end_chapter" : 10,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 68,
+		"day_id" : 69,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 11,
@@ -1404,7 +1368,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 68,
+		"day_id" : 69,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 45,
+		"end_chapter" : 45,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 69,
 		"book_id" : 44,
 		"book_name" : "Acts",
 		"start_chapter" : 9,
@@ -1413,16 +1386,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 69,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 46,
-		"end_chapter" : 46,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 69,
+		"day_id" : 70,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 14,
@@ -1431,7 +1395,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 69,
+		"day_id" : 70,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 46,
+		"end_chapter" : 46,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 70,
 		"book_id" : 44,
 		"book_name" : "Acts",
 		"start_chapter" : 12,
@@ -1440,16 +1413,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 70,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 47,
-		"end_chapter" : 47,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 70,
+		"day_id" : 71,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 17,
@@ -1458,7 +1422,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 70,
+		"day_id" : 71,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 47,
+		"end_chapter" : 47,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 71,
 		"book_id" : 44,
 		"book_name" : "Acts",
 		"start_chapter" : 15,
@@ -1467,16 +1440,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 71,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 48,
-		"end_chapter" : 48,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 71,
+		"day_id" : 72,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 20,
@@ -1485,7 +1449,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 71,
+		"day_id" : 72,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 48,
+		"end_chapter" : 48,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 72,
 		"book_id" : 44,
 		"book_name" : "Acts",
 		"start_chapter" : 18,
@@ -1494,16 +1467,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 72,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 49,
-		"end_chapter" : 49,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 72,
+		"day_id" : 73,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 23,
@@ -1512,7 +1476,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 72,
+		"day_id" : 73,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 49,
+		"end_chapter" : 49,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 73,
 		"book_id" : 44,
 		"book_name" : "Acts",
 		"start_chapter" : 21,
@@ -1521,16 +1494,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 73,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 50,
-		"end_chapter" : 50,
+		"day_id" : 74,
+		"book_id" : 44,
+		"book_name" : "Acts",
+		"start_chapter" : 24,
+		"end_chapter" : 27,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 73,
+		"day_id" : 74,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 26,
@@ -1539,25 +1512,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 73,
-		"book_id" : 44,
-		"book_name" : "Acts",
-		"start_chapter" : 24,
-		"end_chapter" : 26,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
 		"day_id" : 74,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 51,
-		"end_chapter" : 51,
+		"start_chapter" : 50,
+		"end_chapter" : 50,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 74,
+		"day_id" : 75,
+		"book_id" : 44,
+		"book_name" : "Acts",
+		"start_chapter" : 28,
+		"end_chapter" : 28,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 75,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 29,
@@ -1566,25 +1539,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 74,
-		"book_id" : 44,
-		"book_name" : "Acts",
-		"start_chapter" : 27,
-		"end_chapter" : 28,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
 		"day_id" : 75,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 52,
-		"end_chapter" : 52,
+		"start_chapter" : 51,
+		"end_chapter" : 51,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 75,
+		"day_id" : 76,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 33,
@@ -1596,13 +1560,22 @@
 		"day_id" : 76,
 		"book_id" : 19,
 		"book_name" : "Psalms",
+		"start_chapter" : 52,
+		"end_chapter" : 52,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 77,
+		"book_id" : 19,
+		"book_name" : "Psalms",
 		"start_chapter" : 53,
 		"end_chapter" : 53,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 76,
+		"day_id" : 77,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 39,
@@ -1611,16 +1584,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 77,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 54,
-		"end_chapter" : 54,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 77,
+		"day_id" : 78,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 45,
@@ -1632,13 +1596,13 @@
 		"day_id" : 78,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 55,
-		"end_chapter" : 56,
+		"start_chapter" : 54,
+		"end_chapter" : 54,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 78,
+		"day_id" : 79,
 		"book_id" : 24,
 		"book_name" : "Jeremiah",
 		"start_chapter" : 51,
@@ -1648,6 +1612,15 @@
 	},
 	{
 		"day_id" : 79,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 55,
+		"end_chapter" : 56,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 80,
 		"book_id" : 5,
 		"book_name" : "Deuteronomy",
 		"start_chapter" : 1,
@@ -1656,7 +1629,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 79,
+		"day_id" : 80,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 57,
@@ -1665,16 +1638,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 80,
-		"book_id" : 5,
-		"book_name" : "Deuteronomy",
-		"start_chapter" : 7,
-		"end_chapter" : 12,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 80,
+		"day_id" : 81,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 58,
@@ -1686,13 +1650,22 @@
 		"day_id" : 81,
 		"book_id" : 5,
 		"book_name" : "Deuteronomy",
+		"start_chapter" : 7,
+		"end_chapter" : 12,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 82,
+		"book_id" : 5,
+		"book_name" : "Deuteronomy",
 		"start_chapter" : 13,
 		"end_chapter" : 18,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 81,
+		"day_id" : 82,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 59,
@@ -1701,16 +1674,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 82,
-		"book_id" : 5,
-		"book_name" : "Deuteronomy",
-		"start_chapter" : 19,
-		"end_chapter" : 21,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 82,
+		"day_id" : 83,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 60,
@@ -1719,7 +1683,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 82,
+		"day_id" : 83,
+		"book_id" : 5,
+		"book_name" : "Deuteronomy",
+		"start_chapter" : 19,
+		"end_chapter" : 21,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 83,
 		"book_id" : 59,
 		"book_name" : "James",
 		"start_chapter" : 1,
@@ -1728,16 +1701,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 83,
-		"book_id" : 5,
-		"book_name" : "Deuteronomy",
-		"start_chapter" : 22,
-		"end_chapter" : 24,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 83,
+		"day_id" : 84,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 61,
@@ -1746,7 +1710,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 83,
+		"day_id" : 84,
+		"book_id" : 5,
+		"book_name" : "Deuteronomy",
+		"start_chapter" : 22,
+		"end_chapter" : 24,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 84,
 		"book_id" : 59,
 		"book_name" : "James",
 		"start_chapter" : 4,
@@ -1755,16 +1728,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 84,
-		"book_id" : 5,
-		"book_name" : "Deuteronomy",
-		"start_chapter" : 25,
-		"end_chapter" : 27,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 84,
+		"day_id" : 85,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 63,
@@ -1773,7 +1737,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 84,
+		"day_id" : 85,
+		"book_id" : 5,
+		"book_name" : "Deuteronomy",
+		"start_chapter" : 25,
+		"end_chapter" : 27,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 85,
 		"book_id" : 48,
 		"book_name" : "Galatians",
 		"start_chapter" : 1,
@@ -1782,16 +1755,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 85,
-		"book_id" : 5,
-		"book_name" : "Deuteronomy",
-		"start_chapter" : 28,
-		"end_chapter" : 30,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 85,
+		"day_id" : 86,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 64,
@@ -1800,7 +1764,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 85,
+		"day_id" : 86,
+		"book_id" : 5,
+		"book_name" : "Deuteronomy",
+		"start_chapter" : 28,
+		"end_chapter" : 30,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 86,
 		"book_id" : 48,
 		"book_name" : "Galatians",
 		"start_chapter" : 4,
@@ -1809,16 +1782,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 86,
-		"book_id" : 5,
-		"book_name" : "Deuteronomy",
-		"start_chapter" : 31,
-		"end_chapter" : 34,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 86,
+		"day_id" : 87,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 65,
@@ -1828,6 +1792,15 @@
 	},
 	{
 		"day_id" : 87,
+		"book_id" : 5,
+		"book_name" : "Deuteronomy",
+		"start_chapter" : 31,
+		"end_chapter" : 34,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 88,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 68,
@@ -1836,25 +1809,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 88,
-		"book_id" : 20,
-		"book_name" : "Proverbs",
-		"start_chapter" : 10,
-		"end_chapter" : 11,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 88,
-		"book_id" : 36,
-		"book_name" : "Zephaniah",
-		"start_chapter" : 1,
-		"end_chapter" : 3,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 88,
+		"day_id" : 89,
 		"book_id" : 52,
 		"book_name" : "1 Thessalonians",
 		"start_chapter" : 1,
@@ -1864,17 +1819,8 @@
 	},
 	{
 		"day_id" : 89,
-		"book_id" : 20,
-		"book_name" : "Proverbs",
-		"start_chapter" : 12,
-		"end_chapter" : 13,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 89,
-		"book_id" : 29,
-		"book_name" : "Joel",
+		"book_id" : 36,
+		"book_name" : "Zephaniah",
 		"start_chapter" : 1,
 		"end_chapter" : 3,
 		"start_verse" : 0,
@@ -1882,6 +1828,15 @@
 	},
 	{
 		"day_id" : 89,
+		"book_id" : 20,
+		"book_name" : "Proverbs",
+		"start_chapter" : 10,
+		"end_chapter" : 11,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 90,
 		"book_id" : 52,
 		"book_name" : "1 Thessalonians",
 		"start_chapter" : 4,
@@ -1891,8 +1846,8 @@
 	},
 	{
 		"day_id" : 90,
-		"book_id" : 6,
-		"book_name" : "Joshua",
+		"book_id" : 29,
+		"book_name" : "Joel",
 		"start_chapter" : 1,
 		"end_chapter" : 3,
 		"start_verse" : 0,
@@ -1902,13 +1857,13 @@
 		"day_id" : 90,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
-		"start_chapter" : 14,
-		"end_chapter" : 14,
+		"start_chapter" : 12,
+		"end_chapter" : 13,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 90,
+		"day_id" : 91,
 		"book_id" : 53,
 		"book_name" : "2 Thessalonians",
 		"start_chapter" : 1,
@@ -1918,15 +1873,24 @@
 	},
 	{
 		"day_id" : 91,
-		"book_id" : 6,
-		"book_name" : "Joshua",
-		"start_chapter" : 4,
-		"end_chapter" : 9,
+		"book_id" : 20,
+		"book_name" : "Proverbs",
+		"start_chapter" : 14,
+		"end_chapter" : 14,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
 		"day_id" : 91,
+		"book_id" : 6,
+		"book_name" : "Joshua",
+		"start_chapter" : 1,
+		"end_chapter" : 3,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 92,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 15,
@@ -1938,22 +1902,22 @@
 		"day_id" : 92,
 		"book_id" : 6,
 		"book_name" : "Joshua",
+		"start_chapter" : 4,
+		"end_chapter" : 9,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 93,
+		"book_id" : 6,
+		"book_name" : "Joshua",
 		"start_chapter" : 10,
 		"end_chapter" : 12,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 92,
-		"book_id" : 20,
-		"book_name" : "Proverbs",
-		"start_chapter" : 16,
-		"end_chapter" : 16,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 92,
+		"day_id" : 93,
 		"book_id" : 46,
 		"book_name" : "1 Corinthians",
 		"start_chapter" : 1,
@@ -1963,15 +1927,15 @@
 	},
 	{
 		"day_id" : 93,
-		"book_id" : 6,
-		"book_name" : "Joshua",
-		"start_chapter" : 13,
-		"end_chapter" : 15,
+		"book_id" : 20,
+		"book_name" : "Proverbs",
+		"start_chapter" : 16,
+		"end_chapter" : 16,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 93,
+		"day_id" : 94,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 17,
@@ -1980,7 +1944,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 93,
+		"day_id" : 94,
+		"book_id" : 6,
+		"book_name" : "Joshua",
+		"start_chapter" : 13,
+		"end_chapter" : 15,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 94,
 		"book_id" : 46,
 		"book_name" : "1 Corinthians",
 		"start_chapter" : 4,
@@ -1989,16 +1962,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 94,
-		"book_id" : 6,
-		"book_name" : "Joshua",
-		"start_chapter" : 16,
-		"end_chapter" : 18,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 94,
+		"day_id" : 95,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 18,
@@ -2007,7 +1971,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 94,
+		"day_id" : 95,
+		"book_id" : 6,
+		"book_name" : "Joshua",
+		"start_chapter" : 16,
+		"end_chapter" : 18,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 95,
 		"book_id" : 46,
 		"book_name" : "1 Corinthians",
 		"start_chapter" : 7,
@@ -2016,16 +1989,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 95,
-		"book_id" : 6,
-		"book_name" : "Joshua",
-		"start_chapter" : 19,
-		"end_chapter" : 21,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 95,
+		"day_id" : 96,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 19,
@@ -2034,7 +1998,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 95,
+		"day_id" : 96,
+		"book_id" : 6,
+		"book_name" : "Joshua",
+		"start_chapter" : 19,
+		"end_chapter" : 21,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 96,
 		"book_id" : 46,
 		"book_name" : "1 Corinthians",
 		"start_chapter" : 10,
@@ -2043,16 +2016,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 96,
-		"book_id" : 6,
-		"book_name" : "Joshua",
-		"start_chapter" : 22,
-		"end_chapter" : 24,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 96,
+		"day_id" : 97,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 20,
@@ -2061,20 +2025,29 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 96,
-		"book_id" : 46,
-		"book_name" : "1 Corinthians",
-		"start_chapter" : 13,
-		"end_chapter" : 16,
+		"day_id" : 97,
+		"book_id" : 6,
+		"book_name" : "Joshua",
+		"start_chapter" : 22,
+		"end_chapter" : 24,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
 		"day_id" : 97,
-		"book_id" : 7,
-		"book_name" : "Judges",
-		"start_chapter" : 1,
-		"end_chapter" : 7,
+		"book_id" : 46,
+		"book_name" : "1 Corinthians",
+		"start_chapter" : 13,
+		"end_chapter" : 13,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 98,
+		"book_id" : 46,
+		"book_name" : "1 Corinthians",
+		"start_chapter" : 14,
+		"end_chapter" : 14,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -2082,8 +2055,8 @@
 		"day_id" : 98,
 		"book_id" : 7,
 		"book_name" : "Judges",
-		"start_chapter" : 8,
-		"end_chapter" : 14,
+		"start_chapter" : 1,
+		"end_chapter" : 5,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -2091,22 +2064,49 @@
 		"day_id" : 99,
 		"book_id" : 7,
 		"book_name" : "Judges",
+		"start_chapter" : 6,
+		"end_chapter" : 10,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 100,
+		"book_id" : 46,
+		"book_name" : "1 Corinthians",
 		"start_chapter" : 15,
+		"end_chapter" : 15,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 100,
+		"book_id" : 7,
+		"book_name" : "Judges",
+		"start_chapter" : 11,
+		"end_chapter" : 16,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 101,
+		"book_id" : 7,
+		"book_name" : "Judges",
+		"start_chapter" : 17,
 		"end_chapter" : 21,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 100,
-		"book_id" : 8,
-		"book_name" : "Ruth",
-		"start_chapter" : 1,
-		"end_chapter" : 4,
+		"day_id" : 101,
+		"book_id" : 46,
+		"book_name" : "1 Corinthians",
+		"start_chapter" : 16,
+		"end_chapter" : 16,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 100,
+		"day_id" : 102,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 73,
@@ -2115,16 +2115,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 101,
-		"book_id" : 9,
-		"book_name" : "1 Samuel",
+		"day_id" : 102,
+		"book_id" : 8,
+		"book_name" : "Ruth",
+		"start_chapter" : 1,
+		"end_chapter" : 4,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 103,
+		"book_id" : 47,
+		"book_name" : "2 Corinthians",
 		"start_chapter" : 1,
 		"end_chapter" : 3,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 101,
+		"day_id" : 103,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 76,
@@ -2133,25 +2142,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 101,
-		"book_id" : 47,
-		"book_name" : "2 Corinthians",
+		"day_id" : 103,
+		"book_id" : 9,
+		"book_name" : "1 Samuel",
 		"start_chapter" : 1,
 		"end_chapter" : 3,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 102,
-		"book_id" : 9,
-		"book_name" : "1 Samuel",
+		"day_id" : 104,
+		"book_id" : 47,
+		"book_name" : "2 Corinthians",
 		"start_chapter" : 4,
 		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 102,
+		"day_id" : 104,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 77,
@@ -2160,25 +2169,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 102,
-		"book_id" : 47,
-		"book_name" : "2 Corinthians",
+		"day_id" : 104,
+		"book_id" : 9,
+		"book_name" : "1 Samuel",
 		"start_chapter" : 4,
 		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 103,
-		"book_id" : 9,
-		"book_name" : "1 Samuel",
+		"day_id" : 105,
+		"book_id" : 47,
+		"book_name" : "2 Corinthians",
 		"start_chapter" : 7,
 		"end_chapter" : 9,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 103,
+		"day_id" : 105,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 78,
@@ -2187,34 +2196,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 103,
-		"book_id" : 47,
-		"book_name" : "2 Corinthians",
+		"day_id" : 105,
+		"book_id" : 9,
+		"book_name" : "1 Samuel",
 		"start_chapter" : 7,
 		"end_chapter" : 9,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 104,
-		"book_id" : 9,
-		"book_name" : "1 Samuel",
-		"start_chapter" : 10,
-		"end_chapter" : 12,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 104,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 79,
-		"end_chapter" : 79,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 104,
+		"day_id" : 106,
 		"book_id" : 47,
 		"book_name" : "2 Corinthians",
 		"start_chapter" : 10,
@@ -2223,7 +2214,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 105,
+		"day_id" : 106,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 79,
+		"end_chapter" : 79,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 106,
+		"book_id" : 9,
+		"book_name" : "1 Samuel",
+		"start_chapter" : 10,
+		"end_chapter" : 12,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 107,
 		"book_id" : 9,
 		"book_name" : "1 Samuel",
 		"start_chapter" : 13,
@@ -2232,7 +2241,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 105,
+		"day_id" : 107,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 80,
@@ -2241,16 +2250,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 106,
-		"book_id" : 9,
-		"book_name" : "1 Samuel",
-		"start_chapter" : 16,
-		"end_chapter" : 18,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 106,
+		"day_id" : 108,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 84,
@@ -2259,16 +2259,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 107,
+		"day_id" : 108,
 		"book_id" : 9,
 		"book_name" : "1 Samuel",
-		"start_chapter" : 19,
-		"end_chapter" : 21,
+		"start_chapter" : 16,
+		"end_chapter" : 18,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 107,
+		"day_id" : 109,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 88,
@@ -2277,7 +2277,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 108,
+		"day_id" : 109,
+		"book_id" : 9,
+		"book_name" : "1 Samuel",
+		"start_chapter" : 19,
+		"end_chapter" : 21,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 110,
 		"book_id" : 9,
 		"book_name" : "1 Samuel",
 		"start_chapter" : 22,
@@ -2286,16 +2295,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 108,
+		"day_id" : 110,
 		"book_id" : 45,
 		"book_name" : "Romans",
 		"start_chapter" : 1,
-		"end_chapter" : 3,
+		"end_chapter" : 2,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 109,
+		"day_id" : 111,
+		"book_id" : 45,
+		"book_name" : "Romans",
+		"start_chapter" : 3,
+		"end_chapter" : 6,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 111,
 		"book_id" : 9,
 		"book_name" : "1 Samuel",
 		"start_chapter" : 27,
@@ -2304,25 +2322,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 109,
-		"book_id" : 45,
-		"book_name" : "Romans",
-		"start_chapter" : 4,
-		"end_chapter" : 6,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 110,
-		"book_id" : 10,
-		"book_name" : "2 Samuel",
-		"start_chapter" : 1,
-		"end_chapter" : 4,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 110,
+		"day_id" : 112,
 		"book_id" : 45,
 		"book_name" : "Romans",
 		"start_chapter" : 7,
@@ -2331,7 +2331,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 111,
+		"day_id" : 112,
+		"book_id" : 10,
+		"book_name" : "2 Samuel",
+		"start_chapter" : 1,
+		"end_chapter" : 4,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 113,
 		"book_id" : 10,
 		"book_name" : "2 Samuel",
 		"start_chapter" : 5,
@@ -2340,7 +2349,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 111,
+		"day_id" : 113,
 		"book_id" : 45,
 		"book_name" : "Romans",
 		"start_chapter" : 10,
@@ -2349,16 +2358,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 112,
-		"book_id" : 10,
-		"book_name" : "2 Samuel",
-		"start_chapter" : 9,
-		"end_chapter" : 12,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 112,
+		"day_id" : 114,
 		"book_id" : 45,
 		"book_name" : "Romans",
 		"start_chapter" : 13,
@@ -2367,16 +2367,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 113,
+		"day_id" : 114,
 		"book_id" : 10,
 		"book_name" : "2 Samuel",
-		"start_chapter" : 13,
-		"end_chapter" : 18,
+		"start_chapter" : 9,
+		"end_chapter" : 12,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 113,
+		"day_id" : 115,
+		"book_id" : 10,
+		"book_name" : "2 Samuel",
+		"start_chapter" : 13,
+		"end_chapter" : 15,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 115,
 		"book_id" : 45,
 		"book_name" : "Romans",
 		"start_chapter" : 16,
@@ -2385,74 +2394,56 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 114,
-		"book_id" : 10,
-		"book_name" : "2 Samuel",
-		"start_chapter" : 19,
-		"end_chapter" : 24,
+		"day_id" : 115,
+		"book_id" : 20,
+		"book_name" : "Proverbs",
+		"start_chapter" : 21,
+		"end_chapter" : 21,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 114,
+		"day_id" : 116,
+		"book_id" : 10,
+		"book_name" : "2 Samuel",
+		"start_chapter" : 16,
+		"end_chapter" : 21,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 116,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
-		"start_chapter" : 21,
+		"start_chapter" : 22,
 		"end_chapter" : 22,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 115,
-		"book_id" : 11,
-		"book_name" : "1 Kings",
-		"start_chapter" : 1,
-		"end_chapter" : 5,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 115,
+		"day_id" : 117,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
 		"start_chapter" : 23,
+		"end_chapter" : 25,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 117,
+		"book_id" : 10,
+		"book_name" : "2 Samuel",
+		"start_chapter" : 22,
 		"end_chapter" : 24,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 116,
-		"book_id" : 11,
-		"book_name" : "1 Kings",
-		"start_chapter" : 6,
-		"end_chapter" : 10,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 116,
+		"day_id" : 118,
 		"book_id" : 20,
 		"book_name" : "Proverbs",
-		"start_chapter" : 25,
-		"end_chapter" : 26,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 117,
-		"book_id" : 11,
-		"book_name" : "1 Kings",
-		"start_chapter" : 11,
-		"end_chapter" : 15,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 117,
-		"book_id" : 20,
-		"book_name" : "Proverbs",
-		"start_chapter" : 27,
-		"end_chapter" : 28,
+		"start_chapter" : 26,
+		"end_chapter" : 27,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -2460,76 +2451,112 @@
 		"day_id" : 118,
 		"book_id" : 11,
 		"book_name" : "1 Kings",
-		"start_chapter" : 16,
-		"end_chapter" : 20,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 118,
-		"book_id" : 20,
-		"book_name" : "Proverbs",
-		"start_chapter" : 29,
-		"end_chapter" : 30,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 119,
-		"book_id" : 11,
-		"book_name" : "1 Kings",
-		"start_chapter" : 21,
-		"end_chapter" : 22,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 119,
-		"book_id" : 20,
-		"book_name" : "Proverbs",
-		"start_chapter" : 31,
-		"end_chapter" : 31,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 119,
-		"book_id" : 49,
-		"book_name" : "Ephesians",
 		"start_chapter" : 1,
 		"end_chapter" : 4,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 120,
-		"book_id" : 12,
-		"book_name" : "2 Kings",
-		"start_chapter" : 1,
-		"end_chapter" : 5,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 120,
-		"book_id" : 49,
-		"book_name" : "Ephesians",
+		"day_id" : 119,
+		"book_id" : 11,
+		"book_name" : "1 Kings",
 		"start_chapter" : 5,
-		"end_chapter" : 6,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 121,
-		"book_id" : 12,
-		"book_name" : "2 Kings",
-		"start_chapter" : 6,
 		"end_chapter" : 8,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
+		"day_id" : 119,
+		"book_id" : 20,
+		"book_name" : "Proverbs",
+		"start_chapter" : 28,
+		"end_chapter" : 28,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 120,
+		"book_id" : 20,
+		"book_name" : "Proverbs",
+		"start_chapter" : 29,
+		"end_chapter" : 29,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 120,
+		"book_id" : 11,
+		"book_name" : "1 Kings",
+		"start_chapter" : 9,
+		"end_chapter" : 14,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
 		"day_id" : 121,
+		"book_id" : 20,
+		"book_name" : "Proverbs",
+		"start_chapter" : 30,
+		"end_chapter" : 31,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 121,
+		"book_id" : 11,
+		"book_name" : "1 Kings",
+		"start_chapter" : 15,
+		"end_chapter" : 19,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 122,
+		"book_id" : 49,
+		"book_name" : "Ephesians",
+		"start_chapter" : 1,
+		"end_chapter" : 3,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 122,
+		"book_id" : 11,
+		"book_name" : "1 Kings",
+		"start_chapter" : 20,
+		"end_chapter" : 22,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 123,
+		"book_id" : 49,
+		"book_name" : "Ephesians",
+		"start_chapter" : 4,
+		"end_chapter" : 6,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 123,
+		"book_id" : 12,
+		"book_name" : "2 Kings",
+		"start_chapter" : 1,
+		"end_chapter" : 4,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 124,
+		"book_id" : 12,
+		"book_name" : "2 Kings",
+		"start_chapter" : 5,
+		"end_chapter" : 8,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 124,
 		"book_id" : 22,
 		"book_name" : "Song of Solomon",
 		"start_chapter" : 1,
@@ -2538,7 +2565,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 122,
+		"day_id" : 125,
+		"book_id" : 22,
+		"book_name" : "Song of Solomon",
+		"start_chapter" : 6,
+		"end_chapter" : 8,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 125,
 		"book_id" : 12,
 		"book_name" : "2 Kings",
 		"start_chapter" : 9,
@@ -2547,16 +2583,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 122,
-		"book_id" : 22,
-		"book_name" : "Song of Solomon",
-		"start_chapter" : 6,
-		"end_chapter" : 8,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 122,
+		"day_id" : 125,
 		"book_id" : 50,
 		"book_name" : "Philippians",
 		"start_chapter" : 1,
@@ -2565,7 +2592,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 123,
+		"day_id" : 126,
+		"book_id" : 21,
+		"book_name" : "Ecclesiastes",
+		"start_chapter" : 1,
+		"end_chapter" : 1,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 126,
 		"book_id" : 12,
 		"book_name" : "2 Kings",
 		"start_chapter" : 12,
@@ -2574,16 +2610,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 123,
-		"book_id" : 21,
-		"book_name" : "Ecclesiastes",
-		"start_chapter" : 1,
-		"end_chapter" : 1,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 123,
+		"day_id" : 126,
 		"book_id" : 50,
 		"book_name" : "Philippians",
 		"start_chapter" : 2,
@@ -2592,16 +2619,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 124,
-		"book_id" : 12,
-		"book_name" : "2 Kings",
-		"start_chapter" : 15,
-		"end_chapter" : 17,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 124,
+		"day_id" : 127,
 		"book_id" : 21,
 		"book_name" : "Ecclesiastes",
 		"start_chapter" : 2,
@@ -2610,7 +2628,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 125,
+		"day_id" : 127,
+		"book_id" : 12,
+		"book_name" : "2 Kings",
+		"start_chapter" : 15,
+		"end_chapter" : 17,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 128,
+		"book_id" : 21,
+		"book_name" : "Ecclesiastes",
+		"start_chapter" : 6,
+		"end_chapter" : 9,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 128,
 		"book_id" : 12,
 		"book_name" : "2 Kings",
 		"start_chapter" : 18,
@@ -2619,16 +2655,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 125,
+		"day_id" : 129,
 		"book_id" : 21,
 		"book_name" : "Ecclesiastes",
-		"start_chapter" : 6,
-		"end_chapter" : 9,
+		"start_chapter" : 10,
+		"end_chapter" : 12,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 126,
+		"day_id" : 129,
 		"book_id" : 12,
 		"book_name" : "2 Kings",
 		"start_chapter" : 21,
@@ -2637,34 +2673,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 126,
-		"book_id" : 21,
-		"book_name" : "Ecclesiastes",
-		"start_chapter" : 10,
-		"end_chapter" : 12,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 127,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 90,
-		"end_chapter" : 91,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 127,
-		"book_id" : 31,
-		"book_name" : "Obadiah",
-		"start_chapter" : 1,
-		"end_chapter" : 1,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 127,
+		"day_id" : 130,
 		"book_id" : 51,
 		"book_name" : "Colossians",
 		"start_chapter" : 1,
@@ -2673,16 +2682,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 128,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 92,
-		"end_chapter" : 93,
+		"day_id" : 130,
+		"book_id" : 31,
+		"book_name" : "Obadiah",
+		"start_chapter" : 1,
+		"end_chapter" : 1,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 128,
+		"day_id" : 130,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 90,
+		"end_chapter" : 91,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 131,
 		"book_id" : 25,
 		"book_name" : "Lamentations",
 		"start_chapter" : 1,
@@ -2691,7 +2709,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 129,
+		"day_id" : 131,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 92,
+		"end_chapter" : 93,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 132,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 94,
@@ -2700,7 +2727,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 129,
+		"day_id" : 132,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 1,
@@ -2709,16 +2736,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 130,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 96,
-		"end_chapter" : 97,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 130,
+		"day_id" : 133,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 6,
@@ -2727,16 +2745,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 131,
+		"day_id" : 133,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 98,
-		"end_chapter" : 99,
+		"start_chapter" : 96,
+		"end_chapter" : 97,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 131,
+		"day_id" : 134,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 11,
@@ -2745,7 +2763,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 132,
+		"day_id" : 134,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 98,
+		"end_chapter" : 99,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 135,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 100,
@@ -2754,7 +2781,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 132,
+		"day_id" : 135,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 16,
@@ -2763,16 +2790,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 133,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 102,
-		"end_chapter" : 103,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 133,
+		"day_id" : 136,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 21,
@@ -2781,7 +2799,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 134,
+		"day_id" : 136,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 102,
+		"end_chapter" : 103,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 137,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 104,
@@ -2790,7 +2817,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 134,
+		"day_id" : 137,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 26,
@@ -2799,16 +2826,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 135,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 106,
-		"end_chapter" : 106,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 135,
+		"day_id" : 138,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 31,
@@ -2817,7 +2835,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 135,
+		"day_id" : 138,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 106,
+		"end_chapter" : 106,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 138,
 		"book_id" : 57,
 		"book_name" : "Philemon",
 		"start_chapter" : 1,
@@ -2826,7 +2853,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 136,
+		"day_id" : 139,
+		"book_id" : 54,
+		"book_name" : "1 Timothy",
+		"start_chapter" : 1,
+		"end_chapter" : 3,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 139,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 36,
@@ -2835,16 +2871,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 136,
+		"day_id" : 140,
 		"book_id" : 54,
 		"book_name" : "1 Timothy",
-		"start_chapter" : 1,
-		"end_chapter" : 3,
+		"start_chapter" : 4,
+		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 137,
+		"day_id" : 140,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 40,
@@ -2853,16 +2889,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 137,
-		"book_id" : 54,
-		"book_name" : "1 Timothy",
-		"start_chapter" : 4,
-		"end_chapter" : 6,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 138,
+		"day_id" : 141,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 107,
@@ -2871,7 +2898,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 138,
+		"day_id" : 141,
 		"book_id" : 26,
 		"book_name" : "Ezekiel",
 		"start_chapter" : 44,
@@ -2880,7 +2907,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 139,
+		"day_id" : 142,
+		"book_id" : 27,
+		"book_name" : "Daniel",
+		"start_chapter" : 1,
+		"end_chapter" : 3,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 142,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 110,
@@ -2889,16 +2925,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 139,
-		"book_id" : 27,
-		"book_name" : "Daniel",
-		"start_chapter" : 1,
-		"end_chapter" : 3,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 139,
+		"day_id" : 142,
 		"book_id" : 56,
 		"book_name" : "Titus",
 		"start_chapter" : 1,
@@ -2907,16 +2934,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 140,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 111,
-		"end_chapter" : 111,
+		"day_id" : 143,
+		"book_id" : 60,
+		"book_name" : "1 Peter",
+		"start_chapter" : 1,
+		"end_chapter" : 3,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 140,
+		"day_id" : 143,
 		"book_id" : 27,
 		"book_name" : "Daniel",
 		"start_chapter" : 4,
@@ -2925,34 +2952,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 140,
-		"book_id" : 60,
-		"book_name" : "1 Peter",
-		"start_chapter" : 1,
-		"end_chapter" : 3,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 141,
+		"day_id" : 143,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 112,
-		"end_chapter" : 113,
+		"start_chapter" : 111,
+		"end_chapter" : 111,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 141,
-		"book_id" : 27,
-		"book_name" : "Daniel",
-		"start_chapter" : 7,
-		"end_chapter" : 9,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 141,
+		"day_id" : 144,
 		"book_id" : 60,
 		"book_name" : "1 Peter",
 		"start_chapter" : 4,
@@ -2961,25 +2970,25 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 142,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 114,
-		"end_chapter" : 114,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 142,
+		"day_id" : 144,
 		"book_id" : 27,
 		"book_name" : "Daniel",
-		"start_chapter" : 10,
-		"end_chapter" : 12,
+		"start_chapter" : 7,
+		"end_chapter" : 9,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 142,
+		"day_id" : 144,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 112,
+		"end_chapter" : 113,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 145,
 		"book_id" : 55,
 		"book_name" : "2 Timothy",
 		"start_chapter" : 1,
@@ -2988,101 +2997,29 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 143,
-		"book_id" : 13,
-		"book_name" : "1 Chronicles",
-		"start_chapter" : 1,
-		"end_chapter" : 3,
+		"day_id" : 145,
+		"book_id" : 27,
+		"book_name" : "Daniel",
+		"start_chapter" : 10,
+		"end_chapter" : 12,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 143,
+		"day_id" : 145,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 114,
+		"end_chapter" : 114,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 146,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 115,
 		"end_chapter" : 115,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 143,
-		"book_id" : 61,
-		"book_name" : "2 Peter",
-		"start_chapter" : 1,
-		"end_chapter" : 3,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 144,
-		"book_id" : 13,
-		"book_name" : "1 Chronicles",
-		"start_chapter" : 4,
-		"end_chapter" : 7,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 144,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 116,
-		"end_chapter" : 116,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 144,
-		"book_id" : 58,
-		"book_name" : "Hebrews",
-		"start_chapter" : 1,
-		"end_chapter" : 2,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 145,
-		"book_id" : 13,
-		"book_name" : "1 Chronicles",
-		"start_chapter" : 8,
-		"end_chapter" : 11,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 145,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 117,
-		"end_chapter" : 117,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 145,
-		"book_id" : 58,
-		"book_name" : "Hebrews",
-		"start_chapter" : 3,
-		"end_chapter" : 4,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 146,
-		"book_id" : 13,
-		"book_name" : "1 Chronicles",
-		"start_chapter" : 12,
-		"end_chapter" : 15,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 146,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 118,
-		"end_chapter" : 118,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -3097,10 +3034,28 @@
 	},
 	{
 		"day_id" : 146,
-		"book_id" : 58,
-		"book_name" : "Hebrews",
-		"start_chapter" : 5,
-		"end_chapter" : 6,
+		"book_id" : 13,
+		"book_name" : "1 Chronicles",
+		"start_chapter" : 1,
+		"end_chapter" : 3,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 146,
+		"book_id" : 61,
+		"book_name" : "2 Peter",
+		"start_chapter" : 1,
+		"end_chapter" : 3,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 147,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 116,
+		"end_chapter" : 116,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -3108,8 +3063,17 @@
 		"day_id" : 147,
 		"book_id" : 13,
 		"book_name" : "1 Chronicles",
-		"start_chapter" : 16,
-		"end_chapter" : 19,
+		"start_chapter" : 4,
+		"end_chapter" : 7,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 147,
+		"book_id" : 58,
+		"book_name" : "Hebrews",
+		"start_chapter" : 1,
+		"end_chapter" : 2,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -3123,11 +3087,11 @@
 		"end_verse" : 48
 	},
 	{
-		"day_id" : 147,
-		"book_id" : 58,
-		"book_name" : "Hebrews",
-		"start_chapter" : 7,
-		"end_chapter" : 8,
+		"day_id" : 148,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 117,
+		"end_chapter" : 117,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -3135,8 +3099,17 @@
 		"day_id" : 148,
 		"book_id" : 13,
 		"book_name" : "1 Chronicles",
-		"start_chapter" : 20,
-		"end_chapter" : 23,
+		"start_chapter" : 8,
+		"end_chapter" : 11,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 148,
+		"book_id" : 58,
+		"book_name" : "Hebrews",
+		"start_chapter" : 3,
+		"end_chapter" : 4,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -3150,20 +3123,20 @@
 		"end_verse" : 72
 	},
 	{
-		"day_id" : 148,
-		"book_id" : 58,
-		"book_name" : "Hebrews",
-		"start_chapter" : 9,
-		"end_chapter" : 10,
+		"day_id" : 149,
+		"book_id" : 13,
+		"book_name" : "1 Chronicles",
+		"start_chapter" : 12,
+		"end_chapter" : 15,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
 		"day_id" : 149,
-		"book_id" : 13,
-		"book_name" : "1 Chronicles",
-		"start_chapter" : 24,
-		"end_chapter" : 26,
+		"book_id" : 58,
+		"book_name" : "Hebrews",
+		"start_chapter" : 5,
+		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -3178,19 +3151,19 @@
 	},
 	{
 		"day_id" : 149,
-		"book_id" : 58,
-		"book_name" : "Hebrews",
-		"start_chapter" : 11,
-		"end_chapter" : 13,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 118,
+		"end_chapter" : 118,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
 		"day_id" : 150,
-		"book_id" : 13,
-		"book_name" : "1 Chronicles",
-		"start_chapter" : 27,
-		"end_chapter" : 29,
+		"book_id" : 58,
+		"book_name" : "Hebrews",
+		"start_chapter" : 7,
+		"end_chapter" : 8,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -3205,19 +3178,19 @@
 	},
 	{
 		"day_id" : 150,
-		"book_id" : 65,
-		"book_name" : "Jude",
-		"start_chapter" : 1,
-		"end_chapter" : 1,
+		"book_id" : 13,
+		"book_name" : "1 Chronicles",
+		"start_chapter" : 16,
+		"end_chapter" : 19,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
 		"day_id" : 151,
-		"book_id" : 14,
-		"book_name" : "2 Chronicles",
-		"start_chapter" : 1,
-		"end_chapter" : 6,
+		"book_id" : 58,
+		"book_name" : "Hebrews",
+		"start_chapter" : 9,
+		"end_chapter" : 10,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -3231,11 +3204,20 @@
 		"end_verse" : 144
 	},
 	{
+		"day_id" : 151,
+		"book_id" : 13,
+		"book_name" : "1 Chronicles",
+		"start_chapter" : 20,
+		"end_chapter" : 23,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
 		"day_id" : 152,
-		"book_id" : 14,
-		"book_name" : "2 Chronicles",
-		"start_chapter" : 7,
-		"end_chapter" : 12,
+		"book_id" : 58,
+		"book_name" : "Hebrews",
+		"start_chapter" : 11,
+		"end_chapter" : 13,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
@@ -3249,7 +3231,52 @@
 		"end_verse" : 176
 	},
 	{
+		"day_id" : 152,
+		"book_id" : 13,
+		"book_name" : "1 Chronicles",
+		"start_chapter" : 24,
+		"end_chapter" : 26,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
 		"day_id" : 153,
+		"book_id" : 13,
+		"book_name" : "1 Chronicles",
+		"start_chapter" : 27,
+		"end_chapter" : 29,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 153,
+		"book_id" : 65,
+		"book_name" : "Jude",
+		"start_chapter" : 1,
+		"end_chapter" : 1,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 154,
+		"book_id" : 14,
+		"book_name" : "2 Chronicles",
+		"start_chapter" : 1,
+		"end_chapter" : 6,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 155,
+		"book_id" : 14,
+		"book_name" : "2 Chronicles",
+		"start_chapter" : 7,
+		"end_chapter" : 12,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 156,
 		"book_id" : 14,
 		"book_name" : "2 Chronicles",
 		"start_chapter" : 13,
@@ -3258,16 +3285,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 154,
-		"book_id" : 14,
-		"book_name" : "2 Chronicles",
-		"start_chapter" : 19,
-		"end_chapter" : 24,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 154,
+		"day_id" : 157,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 120,
@@ -3276,16 +3294,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 155,
+		"day_id" : 157,
 		"book_id" : 14,
 		"book_name" : "2 Chronicles",
-		"start_chapter" : 25,
-		"end_chapter" : 30,
+		"start_chapter" : 19,
+		"end_chapter" : 24,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 155,
+		"day_id" : 158,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 121,
@@ -3294,7 +3312,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 156,
+		"day_id" : 158,
+		"book_id" : 14,
+		"book_name" : "2 Chronicles",
+		"start_chapter" : 25,
+		"end_chapter" : 30,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 159,
 		"book_id" : 14,
 		"book_name" : "2 Chronicles",
 		"start_chapter" : 31,
@@ -3303,7 +3330,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 156,
+		"day_id" : 159,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 122,
@@ -3312,16 +3339,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 157,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 123,
-		"end_chapter" : 124,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 157,
+		"day_id" : 160,
 		"book_id" : 62,
 		"book_name" : "1 John",
 		"start_chapter" : 1,
@@ -3330,34 +3348,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 158,
-		"book_id" : 15,
-		"book_name" : "Ezra",
-		"start_chapter" : 1,
-		"end_chapter" : 3,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 158,
+		"day_id" : 160,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 125,
-		"end_chapter" : 127,
+		"start_chapter" : 123,
+		"end_chapter" : 124,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 158,
-		"book_id" : 63,
-		"book_name" : "2 John",
-		"start_chapter" : 1,
-		"end_chapter" : 1,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 158,
+		"day_id" : 161,
 		"book_id" : 64,
 		"book_name" : "3 John",
 		"start_chapter" : 1,
@@ -3366,34 +3366,34 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 159,
-		"book_id" : 15,
-		"book_name" : "Ezra",
-		"start_chapter" : 4,
-		"end_chapter" : 6,
+		"day_id" : 161,
+		"book_id" : 63,
+		"book_name" : "2 John",
+		"start_chapter" : 1,
+		"end_chapter" : 1,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 159,
+		"day_id" : 161,
 		"book_id" : 19,
 		"book_name" : "Psalms",
-		"start_chapter" : 128,
+		"start_chapter" : 125,
 		"end_chapter" : 131,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 160,
+		"day_id" : 161,
 		"book_id" : 15,
 		"book_name" : "Ezra",
-		"start_chapter" : 7,
-		"end_chapter" : 10,
+		"start_chapter" : 1,
+		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 160,
+		"day_id" : 162,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 132,
@@ -3402,7 +3402,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 161,
+		"day_id" : 162,
+		"book_id" : 15,
+		"book_name" : "Ezra",
+		"start_chapter" : 7,
+		"end_chapter" : 10,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 163,
 		"book_id" : 16,
 		"book_name" : "Nehemiah",
 		"start_chapter" : 1,
@@ -3411,7 +3420,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 161,
+		"day_id" : 163,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 135,
@@ -3420,16 +3429,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 162,
-		"book_id" : 16,
-		"book_name" : "Nehemiah",
-		"start_chapter" : 4,
-		"end_chapter" : 6,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 162,
+		"day_id" : 164,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 139,
@@ -3438,16 +3438,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 163,
+		"day_id" : 164,
 		"book_id" : 16,
 		"book_name" : "Nehemiah",
-		"start_chapter" : 7,
-		"end_chapter" : 9,
+		"start_chapter" : 4,
+		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 163,
+		"day_id" : 165,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 143,
@@ -3456,7 +3456,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 164,
+		"day_id" : 165,
+		"book_id" : 16,
+		"book_name" : "Nehemiah",
+		"start_chapter" : 7,
+		"end_chapter" : 9,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 166,
 		"book_id" : 16,
 		"book_name" : "Nehemiah",
 		"start_chapter" : 10,
@@ -3465,7 +3474,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 164,
+		"day_id" : 166,
+		"book_id" : 66,
+		"book_name" : "Revelation",
+		"start_chapter" : 1,
+		"end_chapter" : 2,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 166,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 147,
@@ -3474,16 +3492,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 164,
-		"book_id" : 66,
-		"book_name" : "Revelation",
-		"start_chapter" : 1,
-		"end_chapter" : 2,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 165,
+		"day_id" : 167,
 		"book_id" : 17,
 		"book_name" : "Esther",
 		"start_chapter" : 1,
@@ -3492,16 +3501,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 165,
-		"book_id" : 19,
-		"book_name" : "Psalms",
-		"start_chapter" : 148,
-		"end_chapter" : 148,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 165,
+		"day_id" : 167,
 		"book_id" : 66,
 		"book_name" : "Revelation",
 		"start_chapter" : 3,
@@ -3510,16 +3510,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 166,
-		"book_id" : 17,
-		"book_name" : "Esther",
-		"start_chapter" : 4,
-		"end_chapter" : 6,
+		"day_id" : 167,
+		"book_id" : 19,
+		"book_name" : "Psalms",
+		"start_chapter" : 148,
+		"end_chapter" : 148,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 166,
+		"day_id" : 168,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 149,
@@ -3528,7 +3528,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 166,
+		"day_id" : 168,
+		"book_id" : 17,
+		"book_name" : "Esther",
+		"start_chapter" : 4,
+		"end_chapter" : 6,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 168,
 		"book_id" : 66,
 		"book_name" : "Revelation",
 		"start_chapter" : 5,
@@ -3537,16 +3546,7 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 167,
-		"book_id" : 17,
-		"book_name" : "Esther",
-		"start_chapter" : 7,
-		"end_chapter" : 10,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 167,
+		"day_id" : 169,
 		"book_id" : 66,
 		"book_name" : "Revelation",
 		"start_chapter" : 7,
@@ -3555,16 +3555,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 168,
-		"book_id" : 37,
-		"book_name" : "Haggai",
-		"start_chapter" : 1,
-		"end_chapter" : 2,
+		"day_id" : 169,
+		"book_id" : 17,
+		"book_name" : "Esther",
+		"start_chapter" : 7,
+		"end_chapter" : 10,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 168,
+		"day_id" : 170,
 		"book_id" : 66,
 		"book_name" : "Revelation",
 		"start_chapter" : 9,
@@ -3573,52 +3573,34 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 169,
+		"day_id" : 170,
+		"book_id" : 37,
+		"book_name" : "Haggai",
+		"start_chapter" : 1,
+		"end_chapter" : 2,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 171,
 		"book_id" : 38,
 		"book_name" : "Zechariah",
 		"start_chapter" : 1,
-		"end_chapter" : 3,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 169,
-		"book_id" : 66,
-		"book_name" : "Revelation",
-		"start_chapter" : 13,
-		"end_chapter" : 14,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 170,
-		"book_id" : 38,
-		"book_name" : "Zechariah",
-		"start_chapter" : 4,
 		"end_chapter" : 6,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 170,
+		"day_id" : 171,
 		"book_id" : 66,
 		"book_name" : "Revelation",
-		"start_chapter" : 15,
+		"start_chapter" : 13,
 		"end_chapter" : 16,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 171,
-		"book_id" : 38,
-		"book_name" : "Zechariah",
-		"start_chapter" : 7,
-		"end_chapter" : 9,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 171,
+		"day_id" : 173,
 		"book_id" : 66,
 		"book_name" : "Revelation",
 		"start_chapter" : 17,
@@ -3627,16 +3609,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 172,
+		"day_id" : 173,
 		"book_id" : 38,
 		"book_name" : "Zechariah",
-		"start_chapter" : 10,
-		"end_chapter" : 14,
+		"start_chapter" : 7,
+		"end_chapter" : 9,
 		"start_verse" : 0,
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 172,
+		"day_id" : 174,
 		"book_id" : 66,
 		"book_name" : "Revelation",
 		"start_chapter" : 19,
@@ -3645,7 +3627,16 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 173,
+		"day_id" : 174,
+		"book_id" : 38,
+		"book_name" : "Zechariah",
+		"start_chapter" : 10,
+		"end_chapter" : 14,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 175,
 		"book_id" : 19,
 		"book_name" : "Psalms",
 		"start_chapter" : 150,
@@ -3654,20 +3645,20 @@
 		"end_verse" : 0
 	},
 	{
-		"day_id" : 173,
-		"book_id" : 39,
-		"book_name" : "Malachi",
-		"start_chapter" : 1,
-		"end_chapter" : 4,
-		"start_verse" : 0,
-		"end_verse" : 0
-	},
-	{
-		"day_id" : 173,
+		"day_id" : 175,
 		"book_id" : 66,
 		"book_name" : "Revelation",
 		"start_chapter" : 21,
 		"end_chapter" : 22,
+		"start_verse" : 0,
+		"end_verse" : 0
+	},
+	{
+		"day_id" : 175,
+		"book_id" : 39,
+		"book_name" : "Malachi",
+		"start_chapter" : 1,
+		"end_chapter" : 4,
 		"start_verse" : 0,
 		"end_verse" : 0
 	}
