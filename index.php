@@ -3,7 +3,7 @@
 
 require('fpdf182/fpdf.php');
 
-define("VERSION", "4.0");
+define("VERSION", "4.1");
 define("LEFT_MARGIN", 0.75);
 define("RIGHT_MARGIN", 0.5);
 define("TOP_MARGIN", 0.5);
@@ -100,7 +100,7 @@ class PDF extends FPDF
                 } else { # partial chapter. NOTE: assume no cross-chapter reading
                     if ($k[0] == $row["start_chapter"] and $k[1] >= $row["start_verse"] and $k[1] <= $row["end_verse"]) {
                         $read[$bookName][$key]++;
-                        if (!isset($dayWords[$p->{"day_id"}])) {
+                        if (!isset($dayWords[$row["day_id"]])) {
                             $dayWords[$row["day_id"]] = $value;
                         } else {
                             $dayWords[$row["day_id"]] += $value;
