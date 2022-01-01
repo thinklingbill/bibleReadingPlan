@@ -9,4 +9,4 @@ select bp.day_id
   join bible_book bb 
     on bb.book_id = bp.book_id
  order by
-       day_id;
+       day_id, book_id;

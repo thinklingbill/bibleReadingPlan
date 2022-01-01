@@ -60,7 +60,6 @@ $grandTotalWords = 0;
         foreach( $j->{"chapters"} as $c ) {
             $chapterCount++;  
             $chap = $c->{"chapter"};          
-#            print( "Chapter: " . $c->{"chapter"} . "\n" );
             $verseCount = 0;
             $wordsPerChapter = 0;
             foreach( $c->{"verses"}  as $v ) {
@@ -77,10 +76,12 @@ $grandTotalWords = 0;
                 $counts[ $b ][ "$chap.$verse"] = $wordsPerVerse;
                 $read[ $b ][ "$chap.$verse" ] = 0;
             }
+            if ( $b == "Deuteronomy" ) 
+               print ( "Chap: $chap: $wordsPerChapter\n" );
         }
         print( "TOTAL NUMBER OF WORDS IN $b: $wordsPerBook\n");
     }
-
+die;
 print ("TOTAL NUMBER OF WORDS IN THE KJV BIBLE JSON: $grandTotalWords\n");
 
 echo "Read in the current bible reading plan Json exported from mysql workbench\n";
