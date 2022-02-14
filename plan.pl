@@ -3,16 +3,19 @@
 # rather than a more complex standard like JSON. Pipe-delimited is simple, fits the data,
 # and is relatively easy to work with and so that's why that design decision was made.
 
-use strict; use warnings;
+use strict; 
+use warnings;
 use File::Slurp; 
 use Throw;
 use Data::Dumper;
+use POSIX;
 
 # read bible book metadata in
 my @line = read_file( "book.dat" );
 
 my %book = ();
 my @validCat = ("OT","W", "NT");
+my $desiredDailyWords = 5000;
 
 foreach( @line ) {
 
@@ -29,8 +32,7 @@ foreach( @line ) {
    $book{ $bDat[0] } = { "name" => $bDat[1], "category" => $bDat[2] };
 }
 
-#print Dumper( %book );
-
+# print Dumper( %book );
 
 # read the Bible data in
 my %bibleData;
@@ -43,7 +45,8 @@ my $verseList = "";
 
 #my $currentBook = "0";
 
-print "TODO: Gather total wordcount for OT, W, and NT categories\n";
+my %bookCat = ();
+my $totalWords = 0;
 
 foreach( @line ) {
 
@@ -62,6 +65,14 @@ foreach( @line ) {
    }
    $verseList .= $bDat[2] . "|" . $bDat[3] . "|";
 
+   $totalWords += $bDat[3];
+
+   my $category = $book{ $bDat[0] }{ "category" };
+   if ( !defined $bookCat{ $category } ) {
+      $bookCat{ $category } = 0;
+   }
+   $bookCat{ $category } += $bDat[3];
+
    # if desired, print out the individual book abbreviations
    #my $book = $bDat[0];
    #if ( $currentBook ne $book ) {
@@ -72,6 +83,19 @@ foreach( @line ) {
 # store final verse list
 $bibleData{ $currentKey } = $verseList;
 
+print Dumper( %bookCat );
+# print Dumper( %bibleData );
+
+print "TOTAL WORDS: $totalWords\n";
+
+my $planDays = ceil( $totalWords / $desiredDailyWords );
+print "Plan Days: " . $planDays . "\n";
+
+print "DAILY PACE:\n";
+print "OT: " . ceil( $bookCat{ "OT" } / $planDays ) . "\n";
+print "W: " . ceil( $bookCat{ "W" } / $planDays ) . "\n";
+print "NT: " . ceil( $bookCat{ "NT" } / $planDays ) . "\n";
+print "\n";
 # now read the plan
 @line = read_file( "plan.dat" );
 my $currentOrd = "0";
