@@ -10,82 +10,102 @@ use Throw;
 use Data::Dumper;
 use POSIX;
 
-# read bible book metadata in
-my @line = read_file( "book.dat" );
+print "TODO: MARK OFF REFERENCED INDIVIDUAL VERSES\n";
+print "TODO: NEED TO CHECK FOR ANY UNREFERENCED PASSAGES\n";
 
+# application level variables
 my %book = ();
 my @validCat = ("OT","W", "NT");
 my $desiredDailyWords = 5000;
-
-foreach( @line ) {
-
-   chomp( $_ );
-   my @bDat = split(/\|/, $_ );
-
-   # check for bad category
-   my $cat = $bDat[2];
-
-   if ( !grep( /^$cat$/, @validCat ) ) {
-      throw "Bad category in book.dat: $bDat[0] => $cat";
-   }
-
-   $book{ $bDat[0] } = { "name" => $bDat[1], "category" => $bDat[2] };
-}
-
-# print Dumper( %book );
-
-# read the Bible data in
 my %bibleData;
-
-my $currentKey = "0";
-
-@line = read_file( "bookChapterVerseWords.dat" );
-
-my $verseList = "";
-
-#my $currentBook = "0";
-
 my %bookCat = ();
 my $totalWords = 0;
+my $previousKey;
+my $currentKey;
+my @line;
+my @lineData;
+# loop control
+my $looping;
+my $len;
+my $idx;
 
+
+# read bible book metadata in
+@line = read_file( "book.dat" );
+
+
+# read in the list of books and their categories
 foreach( @line ) {
 
    chomp( $_ );
-   my @bDat = split(/\|/, $_ );
+   @lineData = split(/\|/, $_ );
 
-   my $key = $bDat[0] . "|" . $bDat[1];
+   # check for bad category
+   my $cat = $lineData[2];
 
-   if ( $key ne $currentKey ) {
-      if ( $currentKey ne "0" ) {
-        # store verses
-        $bibleData{ $currentKey } = $verseList;
-        $verseList = "";
-      }
-      $currentKey = $key;
+   if ( !grep( /^$cat$/, @validCat ) ) {
+      throw "Bad category in book.dat: $lineData[0] => $cat";
    }
-   $verseList .= $bDat[2] . "|" . $bDat[3] . "|";
 
-   $totalWords += $bDat[3];
-
-   my $category = $book{ $bDat[0] }{ "category" };
-   if ( !defined $bookCat{ $category } ) {
-      $bookCat{ $category } = 0;
-   }
-   $bookCat{ $category } += $bDat[3];
-
-   # if desired, print out the individual book abbreviations
-   #my $book = $bDat[0];
-   #if ( $currentBook ne $book ) {
-   #   print "$book\n";
-   #   $currentBook = $book;
-   #}
+   $book{ $lineData[0] } = { "name" => $lineData[1], "category" => $lineData[2] };
 }
-# store final verse list
-$bibleData{ $currentKey } = $verseList;
 
-print Dumper( %bookCat );
-# print Dumper( %bibleData );
+# read the Bible data in (verses and their wordcount)
+# this was calculated by the bookChapterVerseWords.pl app
+# loop control
+my $verseList = "";
 
+@line = read_file( "bookChapterVerseWords.dat" );
+$len = scalar @line;
+
+$looping = 1;
+$idx = 0;
+do {
+   if ( $idx >= $len ) {
+      # past the last row
+      $looping = 0;
+      $currentKey = ""; # clear the current key
+   }
+   else {
+      # read and parse the line
+      my $l = $line[ $idx ]; 
+      chomp( $l );
+      @lineData = split(/\|/, $l );
+      # get the current line key
+      $currentKey = $lineData[0] . "|" . $lineData[1];
+   }
+
+   if ( $idx == 0 ) { # on the first row, initialize previous key
+      $previousKey = $currentKey;
+      $verseList = "";
+   }
+   $idx++;
+
+   # if the key changed, store the previous data and reset
+   if( $currentKey ne $previousKey ) {
+      $bibleData{ $previousKey } = $verseList;
+      $previousKey = $currentKey;
+      $verseList = "";
+   }
+
+   if ( $looping ) { # if not past the end, grab current data
+      # get current data
+      $verseList .= $lineData[2] . "|" . $lineData[3] . "|";
+      # add to cumulatives
+      $totalWords += $lineData[3];
+      my $category = $book{ $lineData[0] }{ "category" };
+      if ( !defined $bookCat{ $category } ) {
+         $bookCat{ $category } = 0;
+      }
+      $bookCat{ $category } += $lineData[3];
+   }
+
+} while ( $looping );
+
+###print Dumper( %bookCat );
+###print "======================\n";
+###print Dumper( %bibleData );
+###print "======================\n";
 print "TOTAL WORDS: $totalWords\n";
 
 my $planDays = ceil( $totalWords / $desiredDailyWords );
@@ -96,61 +116,77 @@ print "OT: " . ceil( $bookCat{ "OT" } / $planDays ) . "\n";
 print "W: " . ceil( $bookCat{ "W" } / $planDays ) . "\n";
 print "NT: " . ceil( $bookCat{ "NT" } / $planDays ) . "\n";
 print "\n";
+
+###print $bibleData{ "Gen|1" } . "\n";
+###print $bibleData{ "Rev|22" } . "\n";
+
 # now read the plan
 @line = read_file( "plan.dat" );
 my $currentOrd = "0";
 my $day = 0;
-my $wordCount = 0;
+my $dayWordCount = 0;
+my $wordsReadSoFar = 0;
 my $reading = "";
+my %catCount = ();
 
-print "TODO: For each line read in, add its word count to a running count for that category so pace can be determined (show words off pace for each cat)\n";
-print "TODO: MARK OFF REFERENCED INDIVIDUAL VERSES\n";
+$len = scalar @line;
+$looping = 1;
+$idx = 0;
+do {
+   if ( $idx >= $len ) {
+      # past the last row
+      $looping = 0;
+      $currentKey = ""; # clear the current key
+   }
+   else {
+      # read and parse the line
+      my $l = $line[ $idx ]; 
+      chomp( $l );
+      @lineData = split(/\|/, $l );
+      # get the current line key
+      $currentKey = $lineData[0];
+   }
 
-foreach( @line ) {
+   if ( $idx == 0 ) { # on the first row, initialize previous key
+      $previousKey = $currentKey;
+      $reading = "";
+   }
+   $idx++;
 
-   my $r = $_;
-   chomp $r;
-
-   my @pDat = split(/\|/, $r );
-
-#   print Dumper( @pDat);
-
-   my $ord = $pDat[0];
-   if ( $ord ne $currentOrd ) {
-      if ( $currentOrd ne "0" ) {
-         # not at the initial point, so print the day
-#         print "DAY: $day";
-         &printDay( $day, $wordCount, $reading);
-         $reading = "";  #reset
-      }
-      $currentOrd = $ord;
+   # if the key changed, store the previous data and reset
+   if( $currentKey ne $previousKey ) {
+      $wordsReadSoFar += $dayWordCount;
+      &printDay( ($day + 1), $dayWordCount, $reading, $wordsReadSoFar, $planDays, $totalWords, \%bookCat, \%catCount);
       $day++;
-      $wordCount = 0;
+      $dayWordCount = 0;
+      # setup for next key
+      $previousKey = $currentKey;
+      $reading = "";
    }
 
-   # add to day's reading
-   if ( $reading gt "" ) {
-      $reading .= "|";
+   if ( $looping ) { # if not past the end, grab current data
+      # get current data
+      if ( $reading gt "" ) {
+         $reading .= "|";
+      }
+      $reading .= $lineData[1] . "|" . $lineData[2] . "|" . $lineData[3] . "|" . $lineData[4];      
+      my $bibleKey = $lineData[1] . "|" . $lineData[2];
+
+      # add to cumulatives
+      my $startV = $lineData[3];
+      my $endV = $lineData[4];
+      # get the word count for this line
+      my $wc = &wordCount($bibleKey, $startV, $endV);
+      $dayWordCount += $wc;
+      my $category = $book{ $lineData[1] }{ "category" };
+
+      if ( !defined $catCount{ $category } ) {
+         $catCount{ $category } = 0;
+      }
+      $catCount{ $category } += $wc;
    }
 
-   $reading .= $pDat[1] . "|" . $pDat[2] . "|" . $pDat[3] . "|" . $pDat[4];
-
-   # lookup the book and chapter
-   my $key = $pDat[1] . "|" . $pDat[2];
-
-   # get the start verse and end verse
-   my $startV = $pDat[3];
-   my $endV = $pDat[4];
-
-   # get the word count for this line
-   $wordCount += &wordCount($key, $startV, $endV);
-}
-
-# write out final day
-#print "Final day: $day\n";
-&printDay( $day, $wordCount, $reading );
-
-print "TODO: NEED TO CHECK FOR ANY UNREFERENCED PASSAGES\n";
+} while ( $looping );
 
 sub wordCount {
    my ( $key, $startV, $endV ) = @_;
@@ -166,12 +202,12 @@ sub wordCount {
 
    my @verse = split(/\|/, $verseList );
 
-   my $wordCount = 0;
+   my $wc = 0;
    if ( $startV eq "0" && $endV eq "0" ) {
       # get word count for the entire chapter
       # word counts are in every other element
       for ( my $i = 1; $i < scalar @verse; $i += 2 ) {
-         $wordCount += $verse[$i];
+         $wc += $verse[$i];
       }
       # since chapter referenced, remove the verse list
       $bibleData{$key} = "REFERENCED";
@@ -179,17 +215,24 @@ sub wordCount {
    else {
       for ( my $i = 0; $i < scalar @verse; $i += 2 ) {
          if ( $verse[$i] ge $startV && $verse[$i] le $endV ) {
-            $wordCount += $verse[$i + 1];
+            $wc += $verse[$i + 1];
          }
       }
       # note: will need to remove verses already referenced in the verse list
    }
 
-   return $wordCount;
+   return $wc;
 }
 
 sub printDay {
-   my ($day,$wordCount,$reading) = @_;
+   my $day = $_[0];
+   my $dayWc = $_[1];
+   my $reading = $_[2];
+   my $wordsReadSoFar = $_[3];
+   my $planDays = $_[4];
+   my $totalWords = $_[5];
+   my %bookCat = %{$_[6]};
+   my %catCount = %{$_[7]};
 
    my %passage = ();
 
@@ -307,8 +350,31 @@ sub printDay {
    &printCategory( sort( @ot ) );
    &printCategory( sort( @wisdom ) );
    &printCategory( sort( @nt ) );
-   print "|$wordCount";
+   my $totalPace = ceil( $totalWords / $planDays * $day );
+   my $totalOffPace = $wordsReadSoFar - $totalPace;
+
+   ## Note: assuming cats of OT, W, NT
+   my $totalOTPace = ceil( $bookCat{"OT"}  / $planDays * $day);
+   my $totalOTOffPace = $catCount{"OT"} - $totalOTPace;
+   my $totalWPace = ceil( $bookCat{"W"}  / $planDays * $day);
+   my $totalWOffPace = $catCount{"W"} - $totalWPace;
+   my $totalNTPace = ceil( $bookCat{"NT"}  / $planDays * $day);
+   my $totalNTOffPace = $catCount{"NT"} - $totalNTPace;
+
+
+##   print "|WORDCOUNT|$dayWc|WORDSREADSOFAR|$wordsReadSoFar|TOTALOFFPACE|$totalOffPace";
+##   print "|OTCATCOUNT|" . $catCount{ "OT" } . "|TOTALOTOFFPACE|$totalOTOffPace";
+##   print "|WCATCOUNT|" . $catCount{ "W" } . "|TOTALWOFFPACE|$totalWOffPace";
+##   print "|NTCATCOUNT|" . $catCount{ "NT" } . "|TOTALNTOFFPACE|$totalNTOffPace";
+
+   print "|WORDCOUNT|$dayWc|TOTALOFFPACE|$totalOffPace";
+   print "|TOTALOTOFFPACE|$totalOTOffPace";
+   print "|TOTALWOFFPACE|$totalWOffPace";
+   print "|TOTALNTOFFPACE|$totalNTOffPace";
+
    print "\n";
+
+   ###print Dumper( %catCount );
 }
 
 sub printCategory {
