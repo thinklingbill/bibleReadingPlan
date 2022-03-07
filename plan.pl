@@ -251,7 +251,7 @@ sub printDay {
          $book = $_;
          if ( !exists( $passage{$book}) ) {
             $ord++;
-            $passage{ $book } = {"ord" => $ord, "min" => "Z", "max" => "0" };
+            $passage{ $book } = {"ord" => $ord, "minNum" => 1000000, "maxNum" => 0 };
          }
       }
       elsif ( $element == 1 ) {
@@ -261,30 +261,40 @@ sub printDay {
          $startingVerse = $_;
          
          my $chapVerse = "";
+         my $chapVerseNum; 
 
          if ( $startingVerse gt "0") {
-            $chapVerse = "$chapter:$startingVerse"
+            $chapVerse = "$chapter:$startingVerse";
+            $chapVerseNum = $chapter * 1000 + $startingVerse;
          }
          else {
-            $chapVerse = "$chapter"
+            $chapVerse = "$chapter";
+            $chapVerseNum = $chapter * 1000;
          }
-         if ( $chapVerse lt $passage{ $book }{"min"} ) {
+
+         if ( $chapVerseNum < $passage{ $book }{"minNum"} ) {
             $passage{ $book }{"min"} = $chapVerse;
+            $passage{ $book }{"minNum"} = $chapVerseNum;
          }
       }
       elsif ( $element == 3 ) {
          $endingVerse = $_;
 
          my $chapVerse = "";
+         my $chapVerseNum;
 
          if ( $endingVerse gt "0") {
-            $chapVerse = "$chapter:$endingVerse"
+            $chapVerse = "$chapter:$endingVerse";
+            $chapVerseNum = $chapter * 1000 + $endingVerse;
          }
          else {
-            $chapVerse = "$chapter"
+            $chapVerse = "$chapter";
+            $chapVerseNum = $chapter * 1000;
          }
-         if ( $chapVerse gt $passage{ $book }{"max"} ) {
+
+         if ( $chapVerseNum > $passage{ $book }{"maxNum"} ) {
             $passage{ $book }{"max"} = $chapVerse;
+            $passage{ $book }{"maxNum"} = $chapVerseNum;
          }
 
 #         print "$book, $chapter, $startingVerse, $endingVerse\n";
