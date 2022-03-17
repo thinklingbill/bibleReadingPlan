@@ -10,8 +10,9 @@ use Throw;
 use Data::Dumper;
 use POSIX;
 
-print "TODO: MARK OFF REFERENCED INDIVIDUAL VERSES\n";
-print "TODO: NEED TO CHECK FOR ANY UNREFERENCED PASSAGES\n";
+print "TODO: CHECK FOR SKIPPED PASSAGES/VERSES AS A BOOK IS READ\n";
+print "TODO: AT END: NEED TO CHECK FOR ANY UNREFERENCED PASSAGES\n";
+print "TODO: IMPROVE PRINTING OF END OF PASSAGE WHEN VERSES INCLUDED IN BEGINNING OF PASSAGE\n";
 
 # application level variables
 my %book = ();
@@ -197,7 +198,7 @@ sub wordCount {
    }
 
    if ( $verseList eq "REFERENCED" ) {
-      throw "$key key has already been referenced in the plan";
+      throw "$key has already been referenced in the plan";
    }
 
    my @verse = split(/\|/, $verseList );
@@ -214,11 +215,16 @@ sub wordCount {
    }
    else {
       for ( my $i = 0; $i < scalar @verse; $i += 2 ) {
-         if ( $verse[$i] ge $startV && $verse[$i] le $endV ) {
+         if ( $verse[$i] >= $startV && $verse[$i] <= $endV ) {
+            if ( $verse[ $i + 1 ] == -1 ) {
+               throw "$key verse " . $verse[ $i ] . " has already been referenced in the plan";
+            }
             $wc += $verse[$i + 1];
+            $verse[$i + 1] = -1; # mark the verse as referenced
          }
       }
-      # note: will need to remove verses already referenced in the verse list
+      # store the verse list with referenced verses removed
+      $bibleData{$key} = join( "|", @verse );
    }
 
    return $wc;
