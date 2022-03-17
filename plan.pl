@@ -10,9 +10,13 @@ use Throw;
 use Data::Dumper;
 use POSIX;
 
-print "TODO: CHECK FOR SKIPPED PASSAGES/VERSES AS A BOOK IS READ\n";
-print "TODO: AT END: NEED TO CHECK FOR ANY UNREFERENCED PASSAGES\n";
+print "TODO: CHECK FOR SKIPPED PASSAGES/VERSES AS A BOOK IS READ - INDICATOR 'CHECK'\n";
 print "TODO: IMPROVE PRINTING OF END OF PASSAGE WHEN VERSES INCLUDED IN BEGINNING OF PASSAGE\n";
+
+# definitions
+my $REFERENCED = "R";
+my $FINISHED = "FIN";
+my $CHECK = "CHECK";
 
 # application level variables
 my %book = ();
@@ -115,11 +119,8 @@ print "Plan Days: " . $planDays . "\n";
 print "DAILY PACE:\n";
 print "OT: " . ceil( $bookCat{ "OT" } / $planDays ) . "\n";
 print "W: " . ceil( $bookCat{ "W" } / $planDays ) . "\n";
-print "NT: " . ceil( $bookCat{ "NT" } / $planDays ) . "\n";
+print "NT: " .  $bookCat{ "NT" } / $planDays  . "\n";
 print "\n";
-
-###print $bibleData{ "Gen|1" } . "\n";
-###print $bibleData{ "Rev|22" } . "\n";
 
 # now read the plan
 @line = read_file( "plan.dat" );
@@ -170,6 +171,7 @@ do {
       if ( $reading gt "" ) {
          $reading .= "|";
       }
+
       $reading .= $lineData[1] . "|" . $lineData[2] . "|" . $lineData[3] . "|" . $lineData[4];      
       my $bibleKey = $lineData[1] . "|" . $lineData[2];
 
@@ -185,6 +187,23 @@ do {
          $catCount{ $category } = 0;
       }
       $catCount{ $category } += $wc;
+
+      # check for a $FINISHED comment, meaning current book should be 
+      # finished, and please check for any unread content
+      if ( defined( $lineData[ 5 ] ) && $lineData[ 5 ] eq $FINISHED ) {
+         # check all keys for the current book - ensure all reading finished
+         my $b = $lineData[ 1 ];
+         
+         # this is a brute-force loop through the entire Bible array
+         # all keys for the book that is finished should be marked as referenced
+         foreach my $k ( keys %bibleData ) {
+            if ( substr( $k, 0, 3 ) eq $b ) {
+               if ( $bibleData{ $k } ne $REFERENCED ) {
+                  throw "MISSING FROM PLAN: verses in $k\n";
+               }
+            }
+         }
+      }
    }
 
 } while ( $looping );
@@ -194,10 +213,10 @@ sub wordCount {
 
    my $verseList = $bibleData{$key};
    if ( !defined $verseList ) {
-      throw "$key key not found in bibleData array";
+      throw "$key KEY NOT FOUND in bibleData array";
    }
 
-   if ( $verseList eq "REFERENCED" ) {
+   if ( $verseList eq $REFERENCED ) {
       throw "$key has already been referenced in the plan";
    }
 
@@ -208,10 +227,11 @@ sub wordCount {
       # get word count for the entire chapter
       # word counts are in every other element
       for ( my $i = 1; $i < scalar @verse; $i += 2 ) {
+         ###if ( $verse[ $i] == -1 ) { print "NEGATIVE 1 FOUND\n"; }
          $wc += $verse[$i];
       }
       # since chapter referenced, remove the verse list
-      $bibleData{$key} = "REFERENCED";
+      $bibleData{$key} = $REFERENCED;
    }
    else {
       for ( my $i = 0; $i < scalar @verse; $i += 2 ) {
@@ -224,7 +244,21 @@ sub wordCount {
          }
       }
       # store the verse list with referenced verses removed
-      $bibleData{$key} = join( "|", @verse );
+      # first - check to see if all the verses are -1 - if so, just 
+      # store _REFERENCED_
+      my $unreferencedVerses = 0;
+      for ( my $j = 0; $j < scalar @verse; $j += 2 ) {
+         if ( $verse[ $j + 1 ] > -1 ) {
+            $unreferencedVerses++;
+         }
+      }
+      if ( $unreferencedVerses == 0 ) {
+         $bibleData{$key} = $REFERENCED; # all verses referenced
+      }
+      else {
+         $bibleData{$key} = join( "|", @verse );
+      }
+      ###print $key . " - " . $bibleData{$key} . "\n\n";
    }
 
    return $wc;
@@ -370,7 +404,7 @@ sub printDay {
    my $totalOffPace = $wordsReadSoFar - $totalPace;
 
    ## Note: assuming cats of OT, W, NT
-   my $totalOTPace = ceil( $bookCat{"OT"}  / $planDays * $day);
+   my $totalOTPace = ceil( $bookCat{"OT"} / $planDays * $day);
    my $totalOTOffPace = $catCount{"OT"} - $totalOTPace;
    my $totalWPace = ceil( $bookCat{"W"}  / $planDays * $day);
    my $totalWOffPace = $catCount{"W"} - $totalWPace;
