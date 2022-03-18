@@ -10,9 +10,6 @@ use Throw;
 use Data::Dumper;
 use POSIX;
 
-print "TODO: CHECK FOR SKIPPED PASSAGES/VERSES AS A BOOK IS READ - INDICATOR 'CHECK'\n";
-print "TODO: IMPROVE PRINTING OF END OF PASSAGE WHEN VERSES INCLUDED IN BEGINNING OF PASSAGE\n";
-
 # definitions
 my $REFERENCED = "R";
 my $FINISHED = "FIN";
@@ -38,7 +35,6 @@ my $idx;
 # read bible book metadata in
 @line = read_file( "book.dat" );
 
-
 # read in the list of books and their categories
 foreach( @line ) {
 
@@ -49,7 +45,7 @@ foreach( @line ) {
    my $cat = $lineData[2];
 
    if ( !grep( /^$cat$/, @validCat ) ) {
-      throw "Bad category in book.dat: $lineData[0] => $cat";
+      throw "BAD CATEGORY in book.dat: $lineData[0] => $cat";
    }
 
    $book{ $lineData[0] } = { "name" => $lineData[1], "category" => $lineData[2] };
@@ -107,10 +103,6 @@ do {
 
 } while ( $looping );
 
-###print Dumper( %bookCat );
-###print "======================\n";
-###print Dumper( %bibleData );
-###print "======================\n";
 print "TOTAL WORDS: $totalWords\n";
 
 my $planDays = ceil( $totalWords / $desiredDailyWords );
@@ -121,6 +113,10 @@ print "OT: " . ceil( $bookCat{ "OT" } / $planDays ) . "\n";
 print "W: " . ceil( $bookCat{ "W" } / $planDays ) . "\n";
 print "NT: " .  $bookCat{ "NT" } / $planDays  . "\n";
 print "\n";
+
+# plan tracker is a copy of the bible data array - we will
+# use it to keep track of what's been read
+my %planTracker = %bibleData;
 
 # now read the plan
 @line = read_file( "plan.dat" );
@@ -196,10 +192,51 @@ do {
          
          # this is a brute-force loop through the entire Bible array
          # all keys for the book that is finished should be marked as referenced
-         foreach my $k ( keys %bibleData ) {
+         foreach my $k ( keys %planTracker ) {
             if ( substr( $k, 0, 3 ) eq $b ) {
-               if ( $bibleData{ $k } ne $REFERENCED ) {
+               if ( $planTracker{ $k } ne $REFERENCED ) {
                   throw "MISSING FROM PLAN: verses in $k\n";
+               }
+            }
+         }
+      }
+
+      # check for a $CHECK comment, meaning please check for any 
+      # unread content prior to the current point in the current book
+      if ( defined( $lineData[ 5 ] ) && $lineData[ 5 ] eq $CHECK ) {
+         # check all keys for the current book up to current point
+         # make sure nothing has been missed
+         my $b = $lineData[ 1 ];
+         my $c = $lineData[ 2 ];
+         my $ev = $lineData[ 4 ];
+         
+         # this is a brute-force loop through the entire Bible array
+         # all keys for the book that is finished up to current point
+         # should be marked as referenced
+         foreach my $k ( keys %planTracker ) {
+            my @ka = split(/\|/, $k );
+            if ( $ka[0] eq $b && $ka[1] <= $c ) {
+               # we are within current book and chapter
+               if ( $ev == 0 ) { # currently on a full chapter
+                  if ( $planTracker{ $k } ne $REFERENCED ) {
+                     throw "SKIPPED IN PLAN: verses in $k\n";
+                  }
+               }
+               else {
+
+                  my $vl = $planTracker{$k};
+
+                  if ( $vl eq $REFERENCED ) {
+                     # all good
+                  }
+                  else {
+                     my @v = split(/\|/, $vl );
+                     for ( my $i = 0; $i < scalar @v; $i += 2 ) {
+                        if ( $v[$i] <= $ev && $v[$i+1] != -1) {
+                           throw "SKIPPED IN PLAN: verses in $k\n";                  
+                        }
+                     }
+                  }   
                }
             }
          }
@@ -211,13 +248,13 @@ do {
 sub wordCount {
    my ( $key, $startV, $endV ) = @_;
 
-   my $verseList = $bibleData{$key};
+   my $verseList = $planTracker{$key};
    if ( !defined $verseList ) {
-      throw "$key KEY NOT FOUND in bibleData array";
+      throw "$key IS NOT A VALID Bible Reference";
    }
 
    if ( $verseList eq $REFERENCED ) {
-      throw "$key has already been referenced in the plan";
+      throw "$key HAS ALREADY BEEN REFERENCED in the plan";
    }
 
    my @verse = split(/\|/, $verseList );
@@ -227,17 +264,16 @@ sub wordCount {
       # get word count for the entire chapter
       # word counts are in every other element
       for ( my $i = 1; $i < scalar @verse; $i += 2 ) {
-         ###if ( $verse[ $i] == -1 ) { print "NEGATIVE 1 FOUND\n"; }
          $wc += $verse[$i];
       }
       # since chapter referenced, remove the verse list
-      $bibleData{$key} = $REFERENCED;
+      $planTracker{$key} = $REFERENCED;
    }
    else {
       for ( my $i = 0; $i < scalar @verse; $i += 2 ) {
          if ( $verse[$i] >= $startV && $verse[$i] <= $endV ) {
             if ( $verse[ $i + 1 ] == -1 ) {
-               throw "$key verse " . $verse[ $i ] . " has already been referenced in the plan";
+               throw "$key VERSE " . $verse[ $i ] . " HAS ALREADY BEEN REFERENCED in the plan";
             }
             $wc += $verse[$i + 1];
             $verse[$i + 1] = -1; # mark the verse as referenced
@@ -253,12 +289,11 @@ sub wordCount {
          }
       }
       if ( $unreferencedVerses == 0 ) {
-         $bibleData{$key} = $REFERENCED; # all verses referenced
+         $planTracker{$key} = $REFERENCED; # all verses referenced
       }
       else {
-         $bibleData{$key} = join( "|", @verse );
+         $planTracker{$key} = join( "|", @verse );
       }
-      ###print $key . " - " . $bibleData{$key} . "\n\n";
    }
 
    return $wc;
@@ -337,7 +372,6 @@ sub printDay {
             $passage{ $book }{"maxNum"} = $chapVerseNum;
          }
 
-#         print "$book, $chapter, $startingVerse, $endingVerse\n";
          $element = -1;
       }
 
@@ -377,6 +411,12 @@ sub printDay {
                $reading .= "$name $minPassage-" . $max[1]; # just the second verse
             }
             else {
+               if ( index( $minPassage, ":" ) > -1 && index( $maxPassage, ":" ) == -1 ) {
+                  # need to add max verse for the chapter
+                  my @vl = split(/\|/, $bibleData{ $key . "|" . $maxPassage } );
+                  my $maxVerse = @vl[ scalar @vl - 2 ];
+                  $maxPassage .= ":" . $maxVerse;
+               }
                $reading .= "$name $minPassage-$maxPassage"; # show chapters on both
             }
          }
@@ -411,7 +451,7 @@ sub printDay {
    my $totalNTPace = ceil( $bookCat{"NT"}  / $planDays * $day);
    my $totalNTOffPace = $catCount{"NT"} - $totalNTPace;
 
-
+# uncomment these if more information desired
 ##   print "|WORDCOUNT|$dayWc|WORDSREADSOFAR|$wordsReadSoFar|TOTALOFFPACE|$totalOffPace";
 ##   print "|OTCATCOUNT|" . $catCount{ "OT" } . "|TOTALOTOFFPACE|$totalOTOffPace";
 ##   print "|WCATCOUNT|" . $catCount{ "W" } . "|TOTALWOFFPACE|$totalWOffPace";
@@ -423,8 +463,6 @@ sub printDay {
    print "|TOTALNTOFFPACE|$totalNTOffPace";
 
    print "\n";
-
-   ###print Dumper( %catCount );
 }
 
 sub printCategory {
