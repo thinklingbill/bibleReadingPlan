@@ -6,6 +6,7 @@
 use strict; 
 use warnings;
 use File::Slurp; 
+use JSON;
 use Throw;
 use Data::Dumper;
 use POSIX;
@@ -14,6 +15,7 @@ use POSIX;
 my $REFERENCED = "R";
 my $FINISHED = "FIN";
 my $CHECK = "CHECK";
+my $OUTPUT = "JSON"; # set to TEXT or JSON
 
 # application level variables
 my %book = ();
@@ -22,6 +24,7 @@ my $desiredDailyWords = 5000;
 my %bibleData;
 my %bookCat = ();
 my $totalWords = 0;
+my @planJson = ();
 my $previousKey;
 my $currentKey;
 my @line;
@@ -103,16 +106,19 @@ do {
 
 } while ( $looping );
 
-print "TOTAL WORDS: $totalWords\n";
-
 my $planDays = ceil( $totalWords / $desiredDailyWords );
-print "Plan Days: " . $planDays . "\n";
 
-print "DAILY PACE:\n";
-print "OT: " . ceil( $bookCat{ "OT" } / $planDays ) . "\n";
-print "W: " . ceil( $bookCat{ "W" } / $planDays ) . "\n";
-print "NT: " .  $bookCat{ "NT" } / $planDays  . "\n";
-print "\n";
+if ( $OUTPUT eq "TEXT" ) {
+   print "TOTAL WORDS: $totalWords\n";
+
+   print "Plan Days: " . $planDays . "\n";
+
+   print "DAILY PACE:\n";
+   print "OT: " . ceil( $bookCat{ "OT" } / $planDays ) . "\n";
+   print "W: " . ceil( $bookCat{ "W" } / $planDays ) . "\n";
+   print "NT: " .  $bookCat{ "NT" } / $planDays  . "\n";
+   print "\n";
+}
 
 # plan tracker is a copy of the bible data array - we will
 # use it to keep track of what's been read
@@ -244,6 +250,13 @@ do {
    }
 
 } while ( $looping );
+
+if ( $OUTPUT eq "JSON" ) {
+   my $json = JSON->new->allow_nonref;
+   print $json->pretty->encode( \@planJson );
+}
+
+### END MAIN PROGRAM 
 
 sub wordCount {
    my ( $key, $startV, $endV ) = @_;
@@ -436,10 +449,6 @@ sub printDay {
       }
    }
 
-   print $day;
-   &printCategory( sort( @ot ) );
-   &printCategory( sort( @wisdom ) );
-   &printCategory( sort( @nt ) );
    my $totalPace = ceil( $totalWords / $planDays * $day );
    my $totalOffPace = $wordsReadSoFar - $totalPace;
 
@@ -451,18 +460,44 @@ sub printDay {
    my $totalNTPace = ceil( $bookCat{"NT"}  / $planDays * $day);
    my $totalNTOffPace = $catCount{"NT"} - $totalNTPace;
 
-# uncomment these if more information desired
-##   print "|WORDCOUNT|$dayWc|WORDSREADSOFAR|$wordsReadSoFar|TOTALOFFPACE|$totalOffPace";
-##   print "|OTCATCOUNT|" . $catCount{ "OT" } . "|TOTALOTOFFPACE|$totalOTOffPace";
-##   print "|WCATCOUNT|" . $catCount{ "W" } . "|TOTALWOFFPACE|$totalWOffPace";
-##   print "|NTCATCOUNT|" . $catCount{ "NT" } . "|TOTALNTOFFPACE|$totalNTOffPace";
+   if ( $OUTPUT eq "TEXT" ) {
+      print $day; 
+      &printCategory( sort( @ot ) );
+      &printCategory( sort( @wisdom ) );
+      &printCategory( sort( @nt ) );
 
-   print "|WORDCOUNT|$dayWc|TOTALOFFPACE|$totalOffPace";
-   print "|TOTALOTOFFPACE|$totalOTOffPace";
-   print "|TOTALWOFFPACE|$totalWOffPace";
-   print "|TOTALNTOFFPACE|$totalNTOffPace";
+      # uncomment these if more information desired
+      ##   print "|WORDCOUNT|$dayWc|WORDSREADSOFAR|$wordsReadSoFar|TOTALOFFPACE|$totalOffPace";
+      ##   print "|OTCATCOUNT|" . $catCount{ "OT" } . "|TOTALOTOFFPACE|$totalOTOffPace";
+      ##   print "|WCATCOUNT|" . $catCount{ "W" } . "|TOTALWOFFPACE|$totalWOffPace";
+      ##   print "|NTCATCOUNT|" . $catCount{ "NT" } . "|TOTALNTOFFPACE|$totalNTOffPace";
 
-   print "\n";
+      print "|WORDCOUNT|$dayWc|TOTALOFFPACE|$totalOffPace";
+      print "|TOTALOTOFFPACE|$totalOTOffPace";
+      print "|TOTALWOFFPACE|$totalWOffPace";
+      print "|TOTALNTOFFPACE|$totalNTOffPace";
+
+      print "\n";
+   }
+
+   # add to the JSON
+   my %planDay = ( "day" => $day 
+                 , "day_word_count" => $dayWc
+                 , "old_testament_history_prophecy" => &getCategory( sort( @ot ) )
+                 , "old_testament_wisdom_poetry" => &getCategory( sort( @wisdom ) )
+                 , "new_testament" => &getCategory( sort( @nt ) )
+                 , "total_words_read" => $wordsReadSoFar
+                 , "old_testament_history_prophecy_words_read" => $catCount{ "OT" } 
+                 , "old_testament_wisdom_poetry_words_read" => $catCount{ "W" } 
+                 , "new_testament_read" => $catCount{ "NT" } 
+                 , "total_off_pace" => $totalOffPace 
+                 , "old_testament_history_prophecy_off_pace" => $totalOTOffPace 
+                 , "old_testament_wisdom_poetry_off_pace" => $totalWOffPace
+                 , "new_testament_off_pace" => $totalNTOffPace
+   );
+
+   #print Dumper( %planDay );
+   push @planJson, \%planDay;
 }
 
 sub printCategory {
@@ -481,4 +516,19 @@ sub printCategory {
          $sepChar = ","; # after initial pipe, switch to commas
       }   
    }
+}
+
+sub getCategory {
+   my ( @r ) = @_;
+   my $cat = "";
+
+   my $sepChar = "";
+
+   foreach ( @r ) {
+      my @passage = split(/\|/, $_ ); # do this to remove the order
+
+      $cat .= $sepChar . $passage[1];
+      $sepChar = ", "; # after first, sepchar becomes a comma
+   }   
+   return $cat;
 }
