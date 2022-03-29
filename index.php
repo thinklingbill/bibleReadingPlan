@@ -53,6 +53,7 @@ class PDF extends FPDF
 
             switch ($lineCtr) {
                 case (ROWS_PER_PAGE - 1): // on last row
+                case ( count( $plan ) - 1 ): // on last line or plan    
                     $border = "LRB";
                     break;
                 case 0: // on first row
@@ -72,7 +73,7 @@ class PDF extends FPDF
             $this->Ln();
             $lineCtr++;
 
-            if ($lineCtr == ROWS_PER_PAGE) {
+            if ($lineCtr == ROWS_PER_PAGE || $lineCtr == count( $plan )) {
                 $this->Cell(COL_WIDTH[0], FOOTNOTE_HEIGHT, "", 0, 0, 'L');
                 $this->setFont('', 'I', 0);
                 $this->Cell(0, FOOTNOTE_HEIGHT, FOOTNOTE_TEXT, 0, 0, 'L');
