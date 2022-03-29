@@ -15,7 +15,6 @@ use POSIX;
 my $REFERENCED = "R";
 my $FINISHED = "FIN";
 my $CHECK = "CHECK";
-my $OUTPUT = "JSON"; # set to TEXT or JSON
 
 # application level variables
 my %book = ();
@@ -34,6 +33,21 @@ my $looping;
 my $len;
 my $idx;
 
+# get command line argument
+my $argError = ( scalar( @ARGV ) != 1 );
+my $output;
+
+if ( not $argError ) {
+   $output = uc $ARGV[0];
+
+   if ( not ( $argError ) && not ( $output eq "TEXT" || $output eq "JSON" ) ) {
+      $argError = 1; 
+   }
+}
+
+if ( $argError ) {
+	die "usage: plan.pl output [either TEXT or JSON. Defaults to TEXT]\n";
+}
 
 # read bible book metadata in
 @line = read_file( "book.dat" );
@@ -108,7 +122,7 @@ do {
 
 my $planDays = ceil( $totalWords / $desiredDailyWords );
 
-if ( $OUTPUT eq "TEXT" ) {
+if ( $output eq "TEXT" ) {
    print "TOTAL WORDS: $totalWords\n";
 
    print "Plan Days: " . $planDays . "\n";
@@ -251,7 +265,7 @@ do {
 
 } while ( $looping );
 
-if ( $OUTPUT eq "JSON" ) {
+if ( $output eq "JSON" ) {
    my $json = JSON->new->allow_nonref;
    print $json->pretty->encode( \@planJson );
 }
@@ -460,7 +474,7 @@ sub printDay {
    my $totalNTPace = ceil( $bookCat{"NT"}  / $planDays * $day);
    my $totalNTOffPace = $catCount{"NT"} - $totalNTPace;
 
-   if ( $OUTPUT eq "TEXT" ) {
+   if ( $output eq "TEXT" ) {
       print $day; 
       &printCategory( sort( @ot ) );
       &printCategory( sort( @wisdom ) );
