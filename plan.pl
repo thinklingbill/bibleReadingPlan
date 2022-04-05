@@ -147,9 +147,48 @@ my $wordsReadSoFar = 0;
 my $reading = "";
 my %catCount = ();
 
-$len = scalar @line;
+# create the plan hash
+my %plan;
+$idx = 0;
+foreach ( @line ) {
+   $idx++;
+   my $l = $_;
+   chomp( $l );
+   my @a = split(/\|/, $l );
+   # zero fill keys for sorting
+   my $dayKey = sprintf( "%08d", $a[0]);  
+   my $key = $dayKey . "-" . sprintf( "%08d", $idx );
+   my $command = "";
+   if ( defined( $a[5]) ) {
+      $command = $a[5];
+   }
+   $plan{ $key } = { "day_key" => $dayKey
+                   , "book" => $a[1]
+                   , "chapter" => $a[2]
+                   , "starting_verse" => $a[3]
+                   , "ending_verse" => $a[4]
+                   , "command" => $command
+   };
+}
+
+# get sorted list of indexes
+my @pSortKey = sort keys %plan;
+###foreach ( @pSortKey ) {
+###   my $k = $_;
+###   print   $k . "," . $plan{$k}{"day_key"} . "," .
+###           $plan{$k}{"book"} . "," .
+###           $plan{$k}{"chapter"} . "," .
+###           $plan{$k}{"starting_verse"} . "," .
+###           $plan{$k}{"ending_verse"} . "," .
+###           $plan{$k}{"command"};
+###   print "\n";
+###}
+
+$len = scalar @pSortKey;
 $looping = 1;
 $idx = 0;
+my $psk;
+
 do {
    if ( $idx >= $len ) {
       # past the last row
@@ -157,12 +196,9 @@ do {
       $currentKey = ""; # clear the current key
    }
    else {
-      # read and parse the line
-      my $l = $line[ $idx ]; 
-      chomp( $l );
-      @lineData = split(/\|/, $l );
-      # get the current line key
-      $currentKey = $lineData[0];
+      # get the current day key
+      $psk = $pSortKey[ $idx ];
+      $currentKey = $plan{ $psk }{"day_key"};
    }
 
    if ( $idx == 0 ) { # on the first row, initialize previous key
@@ -188,16 +224,16 @@ do {
          $reading .= "|";
       }
 
-      $reading .= $lineData[1] . "|" . $lineData[2] . "|" . $lineData[3] . "|" . $lineData[4];      
-      my $bibleKey = $lineData[1] . "|" . $lineData[2];
+      $reading .= $plan{ $psk }{"book"} . "|" . $plan{ $psk }{"chapter"} . "|" . $plan{ $psk }{"starting_verse"} . "|" . $plan{ $psk }{"ending_verse"};      
+      my $bibleKey = $plan{ $psk }{"book"} . "|" . $plan{ $psk }{"chapter"};
 
       # add to cumulatives
-      my $startV = $lineData[3];
-      my $endV = $lineData[4];
+      my $startV = $plan{ $psk }{"starting_verse"};
+      my $endV = $plan{ $psk }{"ending_verse"};
       # get the word count for this line
       my $wc = &wordCount($bibleKey, $startV, $endV);
       $dayWordCount += $wc;
-      my $category = $book{ $lineData[1] }{ "category" };
+      my $category = $book{ $plan{ $psk }{"book"} }{ "category" };
 
       if ( !defined $catCount{ $category } ) {
          $catCount{ $category } = 0;
@@ -206,9 +242,9 @@ do {
 
       # check for a $FINISHED comment, meaning current book should be 
       # finished, and please check for any unread content
-      if ( defined( $lineData[ 5 ] ) && $lineData[ 5 ] eq $FINISHED ) {
+      if ( defined( $plan{ $psk }{"command"} ) && $plan{ $psk }{"command"} eq $FINISHED ) {
          # check all keys for the current book - ensure all reading finished
-         my $b = $lineData[ 1 ];
+         my $b = $plan{ $psk }{"book"};
          
          # this is a brute-force loop through the entire Bible array
          # all keys for the book that is finished should be marked as referenced
@@ -223,12 +259,12 @@ do {
 
       # check for a $CHECK comment, meaning please check for any 
       # unread content prior to the current point in the current book
-      if ( defined( $lineData[ 5 ] ) && $lineData[ 5 ] eq $CHECK ) {
+      if ( defined( $plan{ $psk }{"command"} ) && $plan{ $psk }{"command"} eq $CHECK ) {
          # check all keys for the current book up to current point
          # make sure nothing has been missed
-         my $b = $lineData[ 1 ];
-         my $c = $lineData[ 2 ];
-         my $ev = $lineData[ 4 ];
+         my $b = $plan{ $psk }{"book"};
+         my $c = $plan{ $psk }{"chapter"};
+         my $ev = $plan{ $psk }{"ending_verse"};
          
          # this is a brute-force loop through the entire Bible array
          # all keys for the book that is finished up to current point
