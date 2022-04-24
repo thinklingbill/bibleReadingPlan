@@ -151,38 +151,44 @@ my %catCount = ();
 my %plan;
 $idx = 0;
 foreach ( @line ) {
-   $idx++;
    my $l = $_;
    chomp( $l );
-   my @a = split(/\|/, $l );
-   # zero fill keys for sorting
-   my $dayKey = sprintf( "%08d", $a[0]);  
-   my $key = $dayKey . "-" . sprintf( "%08d", $idx );
-   my $command = "";
-   if ( defined( $a[5]) ) {
-      $command = $a[5];
+   $l=~ s/^\s+//; # left trim the line
+   if ( substr( $l, 0, 1 ) ne "#" ) { # ignore comment lines
+      my @a = split(/\|/, $l );
+      $idx++;
+      # zero fill keys for sorting
+      my $dayKey = sprintf( "%08d", $a[0]);  
+      my $key = $dayKey . "-" . sprintf( "%08d", $idx );
+      my $command = "";
+      if ( defined( $a[5]) ) {
+         $command = $a[5];
+      }
+      $plan{ $key } = { "day_key" => $dayKey
+                      , "book" => $a[1]
+                      , "chapter" => $a[2]
+                      , "starting_verse" => $a[3]
+                      , "ending_verse" => $a[4]
+                      , "command" => $command
+      };
    }
-   $plan{ $key } = { "day_key" => $dayKey
-                   , "book" => $a[1]
-                   , "chapter" => $a[2]
-                   , "starting_verse" => $a[3]
-                   , "ending_verse" => $a[4]
-                   , "command" => $command
-   };
+   else { 
+      ##print "SKIPPING $l\n";
+   }
 }
 
 # get sorted list of indexes
 my @pSortKey = sort keys %plan;
-###foreach ( @pSortKey ) {
-###   my $k = $_;
-###   print   $k . "," . $plan{$k}{"day_key"} . "," .
-###           $plan{$k}{"book"} . "," .
-###           $plan{$k}{"chapter"} . "," .
-###           $plan{$k}{"starting_verse"} . "," .
-###           $plan{$k}{"ending_verse"} . "," .
-###           $plan{$k}{"command"};
-###   print "\n";
-###}
+#foreach ( @pSortKey ) {
+#   my $k = $_;
+#   print   $k . "," . $plan{$k}{"day_key"} . "," .
+#           $plan{$k}{"book"} . "," .
+#           $plan{$k}{"chapter"} . "," .
+#           $plan{$k}{"starting_verse"} . "," .
+#           $plan{$k}{"ending_verse"} . "," .
+#           $plan{$k}{"command"};
+#   print "\n";
+#}
 
 $len = scalar @pSortKey;
 $looping = 1;
@@ -305,6 +311,11 @@ if ( $output eq "JSON" ) {
    my $json = JSON->new->allow_nonref;
    print $json->pretty->encode( \@planJson );
 }
+
+if ( $output eq "TEXT") {
+   print "TODO: Fix it where if you don't have a category started on the first day it doesn't give an error\n";
+   print "TODO: Look at CONTINUE statement here: https://www.tutorialspoint.com/perl/perl_continue_statement.htm#:~:text=A%20continue%20BLOCK%2C%20is%20always,statement%20rather%20than%20a%20function.\n";
+}   
 
 ### END MAIN PROGRAM 
 
@@ -513,8 +524,8 @@ sub printDay {
    if ( $output eq "TEXT" ) {
       print $day; 
       &printCategory( sort( @ot ) );
-      &printCategory( sort( @wisdom ) );
-      &printCategory( sort( @nt ) );
+#      &printCategory( sort( @wisdom ) );
+#      &printCategory( sort( @nt ) );
 
       # uncomment these if more information desired
       ##   print "|WORDCOUNT|$dayWc|WORDSREADSOFAR|$wordsReadSoFar|TOTALOFFPACE|$totalOffPace";
@@ -522,10 +533,10 @@ sub printDay {
       ##   print "|WCATCOUNT|" . $catCount{ "W" } . "|TOTALWOFFPACE|$totalWOffPace";
       ##   print "|NTCATCOUNT|" . $catCount{ "NT" } . "|TOTALNTOFFPACE|$totalNTOffPace";
 
-      print "|WORDCOUNT|$dayWc|TOTALOFFPACE|$totalOffPace";
+#      print "|WORDCOUNT|$dayWc|TOTALOFFPACE|$totalOffPace";
       print "|TOTALOTOFFPACE|$totalOTOffPace";
-      print "|TOTALWOFFPACE|$totalWOffPace";
-      print "|TOTALNTOFFPACE|$totalNTOffPace";
+#      print "|TOTALWOFFPACE|$totalWOffPace";
+#      print "|TOTALNTOFFPACE|$totalNTOffPace";
 
       print "\n";
    }
