@@ -1,1 +1,6 @@
 *.swp
+*.iml
+*.log
+metastore_db
+spark-warehouse
+target
