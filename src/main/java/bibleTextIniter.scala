@@ -2,13 +2,13 @@ import org.apache.spark.sql.SparkSession
 import functions._
 
 // initializes/loads the bible book table
-object initBibleText {
-  def loadBibleText(spark: SparkSession
+object bibleTextIniter {
+  def initBibleText(spark: SparkSession
                     , schema: String
                     , table: String
                     , inFile: String): Unit = {
 
-    val processName = "loadBibleText"
+    val processName = "initBibleText"
 
     logIt( s"$processName: drop and recreate $schema.$table")
     spark.sql(s"drop table if exists $schema.$table")

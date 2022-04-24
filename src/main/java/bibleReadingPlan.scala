@@ -6,8 +6,9 @@ import com.itextpdf.layout.element.Paragraph
 import com.itextpdf.layout.element.Cell
 import scopt.OParser
 import org.apache.spark.sql.SparkSession
-import initBibleBook.loadBibleBook
-import initBibleText.loadBibleText
+import bibleBookIniter.initBibleBook
+import bibleTextIniter.initBibleText
+import bibleReadingPlanBuilder.buildBibleReadingPlan
 
 object bibleReadingPlan {
   def main(args: Array[String]) = {
@@ -59,9 +60,13 @@ object bibleReadingPlan {
             spark.sql(s"create schema ${config.schema}")
           }
 
-          case "bible_book" => loadBibleBook(spark, config.schema, config.table, config.inFile)
+          case "bible_book" => initBibleBook(spark, config.schema, config.table, config.inFile)
 
-          case "bible_text" => loadBibleText(spark, config.schema, config.table, config.inFile)
+          case "bible_text" => initBibleText(spark, config.schema, config.table, config.inFile)
+
+          case "bible_reading_plan" => buildBibleReadingPlan( spark, config.schema, config.table, config.inFile)
+
+
 
           case "excel_test" => {
             val df = spark.read
