@@ -21,6 +21,7 @@ object bibleTextIniter {
          |  ,verse           integer
          |  ,verse_text      string
          |  ,word_count      integer
+         |  ,word_count_cum_per_book  integer
          |)
          |stored as ORC
          |""".stripMargin
@@ -32,7 +33,7 @@ object bibleTextIniter {
 
     logIt( s"$processName: calculate word count and assign column names")
     // notice collapsing multiple spaces down to one
-    val df = spark.sql(
+    spark.sql(
       s"""
          |select _c0 as book_abbr
          |     , cast( _c1 as integer ) as chapter
@@ -40,6 +41,23 @@ object bibleTextIniter {
          |     , trim( _c3 ) as verse_text
          |     , size( split( trim( regexp_replace( _c3, ' +', ' ' ) ), ' ' ) ) as word_count
          |  from t
+         |""".stripMargin
+    )
+        .createOrReplaceTempView("t1")
+
+    logIt( s"$processName: Add cumulative words per book" )
+    val df = spark.sql(
+      s"""
+         |select t1.book_abbr
+         |     , t1.chapter
+         |     , t1.verse
+         |     , t1.verse_text
+         |     , t1.word_count
+         |     , sum(t1.word_count) over (partition by t1.book_abbr
+         |                                   order by t1.chapter, t1.verse
+         |                                   rows between unbounded preceding and current row
+         |                               ) as word_count_cum_per_book
+         |  from t1
          |""".stripMargin
     )
 

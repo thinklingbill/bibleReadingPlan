@@ -128,17 +128,25 @@ object bibleReadingPlan {
             //            ).show(1000, false)
 //            spark.sql("select sum( word_count ) from bible_reading_plan.bible_text").show()
 //            spark.sql("select book_abbr, chapter, verse, word_count  from bible_reading_plan.bible_text where book_abbr = 'Jo3' order by chapter, verse").show(1000, false)
+//            spark.sql(
+//              s"""
+//                 |select bb.book_category
+//                 |     , sum( bt.word_count )
+//                 |  from bible_reading_plan.bible_book bb
+//                 |  join bible_reading_plan.bible_text bt
+//                 |    on bt.book_abbr = bb.book_abbr
+//                 | group by
+//                 |       bb.book_category
+//                 |""".stripMargin
+//            ).show()
+
+//            spark.sql( s"select * from bible_reading_plan.bible_book_category order by category_ord").show()
             spark.sql(
-              s"""
-                 |select bb.book_category
-                 |     , sum( bt.word_count )
-                 |  from bible_reading_plan.bible_book bb
-                 |  join bible_reading_plan.bible_text bt
-                 |    on bt.book_abbr = bb.book_abbr
-                 | group by
-                 |       bb.book_category
-                 |""".stripMargin
-            ).show()
+              s"""select book_abbr, chapter, verse, word_count, word_count_cum_per_book
+                 |from bible_reading_plan.bible_text
+                 |where book_abbr = 'Mar'
+                 |order by book_abbr, chapter, verse""".stripMargin).show(300, false )
+
           }
           case _ => {
             throw new Exception(s"unknown table/command in command line arguments: $config.table")

@@ -38,22 +38,30 @@ object bibleReadingPlanBuilder {
       .load(inFile)
 
     //    df.printSchema()
-    //    df.show()
+        df.show()
 
-    logIt("Some testing")
     df
-      .createOrReplaceTempView("p")
+      .createOrReplaceTempView("raw_plan")
 
+    logIt( s"$processName: Calculate words to read per entry and the reading order")
     spark.sql(
       s"""
          |select p.ord
+         |     , row_number( ) over (partition by p.ord
+         |                               order by bbc.category_ord, bb.book_ord
+         |                          ) as reading_ord
          |     , p.book_abbr
          |     , p.start_chapter
          |     , p.start_verse
          |     , p.end_chapter
          |     , p.end_verse
-         |     , sum( bt.word_count )
-         |  from p
+         |     , p.operation
+         |     , sum( bt.word_count ) as words_to_read
+         |  from raw_plan p
+         |  join $schema.bible_book bb
+         |    on bb.book_abbr = p.book_abbr
+         |  join $schema.bible_book_category bbc
+         |    on bbc.category_abbr = bb.category_abbr
          |  join $schema.bible_text bt
          |    on bt.book_abbr = p.book_abbr
          |   and bt.chapter between p.start_chapter and p.end_chapter
@@ -65,13 +73,61 @@ object bibleReadingPlanBuilder {
          |                        else 100000 end
          | group by
          |       p.ord
+         |     , bbc.category_ord
+         |     , bb.book_ord
          |     , p.book_abbr
          |     , p.start_chapter
          |     , p.start_verse
          |     , p.end_chapter
          |     , p.end_verse
+         |     , p.operation
          |""".stripMargin
-    ).show()
+    ).createOrReplaceTempView("p1")
+
+    logIt( s"$processName: Calculate the cumulative words to read per book")
+   spark.sql(
+     s"""
+        |select p1.ord
+        |     , p1.reading_ord
+        |     , p1.book_abbr
+        |     , p1.start_chapter
+        |     , p1.start_verse
+        |     , p1.end_chapter
+        |     , p1.end_verse
+        |     , p1.operation
+        |     , p1.words_to_read
+        |     , sum( p1.words_to_read ) over ( partition by p1.book_abbr
+        |                                          order by p1.start_chapter, p1.start_verse
+        |                                           rows between unbounded preceding and current row
+        |                               ) as word_to_read_cum_per_book
+        |  from p1
+        |""".stripMargin
+   )
+       .createOrReplaceTempView("plan")
+
+    spark.sql( "select * from plan order by reading_ord").show()
+
+    // run checks
+    // for any given check record, see if the theoretical word count
+    // up to that record = the word count so far at that record
+    // for that book
+//    spark.sql(
+//      s"""
+//         |select bt.book_abbr
+//         |     , bt.chapter
+//         |     , bt.verse
+//         |     , sum( bt.word_count ) as sum_words
+//         |  from $schema.bible_text bt
+//         |  join (
+//         |         select
+//         |                p.book_abbr
+//         |              , p.end_chapter
+//         |              , p.end_verse
+//         |           from p
+//         |          where operation = 'CHECK'
+//         |""".stripMargin
+//    ).show()
+
     //
     //    logIt( s"$processName: calculate word count and assign column names")
     //    // notice collapsing multiple spaces down to one
